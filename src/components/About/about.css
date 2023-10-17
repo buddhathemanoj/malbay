@@ -4,15 +4,12 @@
 }
 .transport-container {
     display: flex;
-    gap: 80px;
-    padding-left: 65px;
+   
+    padding-left: 25px;
     margin-bottom: 40px;
     padding-bottom: 30px;
+}
 
-}
-.welcome-container {
-    width: 700px;
-}
 .welcome-heading {
     font-weight: bold;
 }
@@ -45,6 +42,7 @@
     font-weight: bold;
     animation: shadow-blink 3s infinite; 
 }
+
 .know-more-bt:hover {
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 4px #ccc;
@@ -54,30 +52,26 @@
 
 .travel-container {
     background-color: #d4dfe8;
+    width: 100%;
     min-height: 80vh;
     padding-left: 65px;
     padding-bottom: 40px;
     padding-top: 67px;
 }
-.choose-container {
-    width: 1150px;
-    margin-bottom: 35px;
-}
+/* .choose-container {
+   padding: 0 20px;
+} */
 .safety-icon {
     font-size: 95px;
     color: #000000;
     margin-bottom: 15px;
 }
 .choose-list-item-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 380px;
-      border: 1px solid #ccc;
-      padding: 9px;
-      border-radius: 10px;
+      padding: 20px;
+     width: 380px;
+  
       background-color: #ccc5;
-      height: 100%;
+     
      
 }
 .safety-heading {
@@ -94,8 +88,8 @@
 .choose-list-container {
     display: flex;
     gap: 20px;
-    padding-left: 0px;
-    padding-left: 30px;
+   justify-content: center;
+   margin: 0 auto;
     list-style-type: none;
 }
 .travel-desc {
@@ -112,25 +106,31 @@
     justify-content: center;
   }
 
-  @media (max-width:768px) {
-    .half-image {
-        display: none;
+  @media screen and (max-width: 960px) {
+    .choose-container{
+       
+        margin-bottom: 35px;
     }
-    .transport-container {
-        flex-direction: column;
-        margin-bottom: 20px;
+    .choose-list-item-container {
+        padding: 20px;
+        margin: auto;
+       width: 330px;
+    
+        background-color: #ccc5;
+       
+       
+  }
+  .listwrapper{
+    margin: 0 auto;
+    justify-content: center;
+  }
+    .carrr{
+        width: 70%;
+        margin-top: 20px;
     }
     .choose-container {
-        width: 80%;
-    }
-    .choose-list-container {
-       flex-wrap: wrap;
-       padding-left: 8pc;
-    }
-    .view-service-container {
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding-left: 15pc;
-    }
+     padding-right: 10%;
+        text-align: center;
+     }
     
   }
