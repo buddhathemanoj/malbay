@@ -1,0 +1,17 @@
+.list-unstyled li a {
+    text-decoration: none;
+    color: white;
+    font-family: "Open Sans",Sans-serif;
+  
+  }
+  h3.logoname a {
+    text-decoration: none;
+  }
+  
+  .para{
+    font-family: "Open Sans",Sans-serif;
+  
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }

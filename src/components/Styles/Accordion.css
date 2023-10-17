@@ -1,0 +1,63 @@
+.accordion-container {
+    display: flex;
+    flex-wrap: wrap;
+   
+    justify-content: space-between;
+}
+.accord-wrapper{
+    padding: 20px;
+}
+.accordion-item {
+    width: calc(25% - 10px); /* Subtracting margin */
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.accordion-item.open .accordion-content {
+    display: block !important;
+}
+.accordion-title {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-title:hover {
+    background-color: #e0e0e0;
+}
+
+.accordion-content {
+    display: none; /* This will be overridden by React when an accordion is active */
+    padding: 10px 15px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.know-more-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.know-more-btn:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 960px) {
+    .accordion-item {
+        flex: 1 1 100%; /* Make it full-width for mobile */
+    }
+}
