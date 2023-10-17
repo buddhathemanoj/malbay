@@ -28,7 +28,7 @@
     font-family: "Open Sans",Sans-serif;
 }
 .homecontparas{
-    padding: 80px;
+    padding:  80px;
 }
 .marginbtn{
     margin-left: 45%;
@@ -176,7 +176,7 @@
         font-size: 16px;
     }
     .homecontparas{
-        padding: 30px;
+        padding: 0 30px;
     }
 
     .marginbtn{
@@ -191,6 +191,7 @@
         animation: fadeIn 1.5s ease-in-out;
     }
     .fleet-container {
+        padding: 0px 30px;
         flex-direction: column;
       }
       .fleet-text {
