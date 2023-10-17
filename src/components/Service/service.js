@@ -42,12 +42,13 @@ const Service = () => {
                           ready to accommodate last-minute or pre-planned bookings for groups of any size. Choose Mundi for a 
                           luxurious and secure journey to the airport, ensuring you arrive in style and peace of mind.
                         </p>
-                        <button className="btn btn-info">Learn more</button>
+                        <button className="btn btn-info margintop">Learn more</button>
                 </div>
-                <img src={car} alt="cars" style={{borderRadius:"10px"}} />
+                <img className="marginbtm" src={car} alt="cars" style={{borderRadius:"10px"}} />
             </div>
             <div className="privat-bg-container">
-                <img src={car1} alt="cars" style={{borderRadius:"10px"}}/>
+
+                <img  className="margintop" src={car1} alt="cars" style={{borderRadius:"10px"}}/>
                 <div className="private-transfer-container">
                       <h1>Exclusive Ground Transportation for Private Aviation</h1>
                       <p>Experience a level of ground transportation service like never before with Mundi,
@@ -56,7 +57,7 @@ const Service = () => {
                         <button className="btn btn-info">Learn more</button>
                 </div>
             </div>
-            <div className="airport-bg-container">
+            <div className="airport-bg-container1">
                 <div className="airport-transfer-container">
                       <h1>Flexible Hourly Charter</h1>
                       <p>For any trip, whether it's a brief jaunt or an extended journey, 
@@ -65,7 +66,7 @@ const Service = () => {
                          Simply provide your pick-up details and choose your travel stops while en route.</p>
                         <button className="btn btn-info">Learn more</button>
                 </div>
-                <img src={car2} alt="cars" style={{borderRadius:"10px"}} />
+                <img className="margiiin" src={car2} alt="cars" style={{borderRadius:"10px"}} />
             </div>
 
             <div className="extended-bg-container">
