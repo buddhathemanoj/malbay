@@ -1,0 +1,60 @@
+.loacation-bg-container {
+    min-height: 100vh;
+    padding-left: 50px;
+    padding-top: 40px;
+    background-color: rgb(255, 255, 255);
+}
+.sekinchan-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 75px;
+}
+.framing-container {
+    width: 550px;
+    text-align: center;
+}
+.framing-heading {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.framing-desc {
+    color: rgb(35, 53, 67);
+    font-weight: 400;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.book-now-btn {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 4px #ccc;
+    color: #000000;
+}
+.book-now-btn {
+    background-color: #3498db;
+    padding: 9px;
+    border-radius: 5px;
+    outline: none;
+    color: #ffff;
+    width: 160px;
+    border: 1px solid #3498db;
+    transition: background-color 0.5s ease;
+    margin-top: 15px;
+    font-weight: bold;
+    animation: shadow-blink 3s infinite; 
+}
+.book-now-btn:hover {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 4px #ccc;
+    color: #000000;
+}
+
+@keyframes shadow-blink {
+    0% {
+      box-shadow: 0 0 10px rgb(120, 189, 245);
+    }
+    50% {
+      box-shadow: 0 0 20px rgb(8, 141, 250);
+    }
+    100% {
+      box-shadow: 0 0 10px rgb(120, 189, 245);
+    }
+  }
