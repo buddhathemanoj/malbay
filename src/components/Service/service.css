@@ -3,19 +3,23 @@
     display: flex;
     padding-left: 0px;
     margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
 }
 .services-list-item {
-    width: 350px;
+    width: calc(25% - 10px);
     display: flex;
     align-items: center;
     text-align: center;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 20px;
 }
-.luxury-car-container{
+.luxury-car-container {
     padding-left: 50px;
     padding-top: 40px;
-    background-image: linear-gradient(black,#1e1e1e);
+    background-image: linear-gradient(black, #1e1e1e);
     color: #FFF;
     min-height: 60vh;
     padding-bottom: 26px;
@@ -30,10 +34,12 @@
     font-size: 17px;
     margin-bottom: 50px;
 }
+
 .services-icon {
     font-size: 75px;
     margin-bottom: 20px;
 }
+
 .services-desc {
     font-weight: bold;
     font-size: 24px;
@@ -58,7 +64,6 @@
     gap: 50px;
     justify-content: space-around;
     color: #FFFF;
-    /* background-image: linear-gradient(to left,#3498db,#8e44ad); */
     background-color: #4D4C7D;
 }
 
@@ -73,6 +78,48 @@
     gap: 50px;
     justify-content: space-around;
     color: #FFFF;
-    /* background-image: linear-gradient(to left,#3498db,#8e44ad); */
     background-color: #4D4C7D;
+}
+@media screen and (max-width: 960px) {
+    .luxury-car-container {
+        padding-left: 20px;
+        padding-right: 20px;
+        min-height: 100vh !important;
+    }
+    
+    .services-list-container {
+        justify-content: space-between;
+    }
+
+    .services-list-item {
+        width: calc(50% - 10px);
+    }
+
+    .airport-bg-container,
+    .privat-bg-container,
+    .extended-bg-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        min-height: 100vh;
+    }
+
+    .airport-transfer-container,
+    .private-transfer-container {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    img {
+        width: 80%;
+        
+        margin: 0 auto;
+    }
+
+    .btn {
+        display: block;
+        margin: 20px auto;
+    }
 }

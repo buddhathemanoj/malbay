@@ -81,24 +81,26 @@ const About = () => {
                         catering to travel between Singapore and Johor Bahru, Legoland Malaysia, as well as various other destinations in Malaysia. Our range of private transport options is designed to meet the unique needs of every traveler, providing private transfers and hire-with-driver services for individuals, families, groups,
                         and both leisure and business travelers. All our transport services include a dedicated driver, ensuring a seamless and enjoyable journey.
                     </p>
-                    <button type='button' className='know-more-bt btn btn-primary'>KNOW MORE</button>
+
                 </div>
                 <div className="col-12 col-md-6 text-center">
                     <img src={car2} alt="car" className="img-fluid carrr mb-4" />
-                </div>
+                </div>    
+                                <button type='button' className='know-more-bt btn btn-primary'>KNOW MORE</button>
+
             </div>
 
             {/* <div className="row justify-content-end">
                 <img src={car1} alt="xc" className='img-fluid col-6 carrrrr2 col-md-3 mb-4 rounded' />
             </div> */}
 
-            <div className='travel-container container-fluid  py-4'>
-                <div className='choose-container text-center mb-4'>
+            <div className='travel-container   '>
+                <div className='choose-container  '>
                     <h1 className='welcome-heading'>WHY CHOOSE OUR TRAVEL SERVICES</h1>
                     <p className='travel-desc'>At Sincere Transport Services, we prioritize your safety and comfort. Our commitment extends to providing private car transportation at exceptionally affordable rates,
                      ensuring that every family's visit to Legoland Malaysia is both accessible and enjoyable.</p>
                 </div>
-<div className="listwrapper">
+<div className="listwrapper ">
 
 
                 <ul className='choose-list-container row'>
