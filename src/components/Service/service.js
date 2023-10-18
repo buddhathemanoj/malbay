@@ -44,10 +44,10 @@ const Service = () => {
                         </p>
                         <button className="btn btn-info">Learn more</button>
                 </div>
-                <img src={car} alt="cars" style={{borderRadius:"10px"}} />
+                <img src={car} alt="cars" style={{borderRadius:"10px"}} className="car-img" />
             </div>
             <div className="privat-bg-container">
-                <img src={car1} alt="cars" style={{borderRadius:"10px"}}/>
+                <img src={car1} alt="cars" style={{borderRadius:"10px"}} className="car-img"/>
                 <div className="private-transfer-container">
                       <h1>Exclusive Ground Transportation for Private Aviation</h1>
                       <p>Experience a level of ground transportation service like never before with Mundi,
@@ -65,11 +65,11 @@ const Service = () => {
                          Simply provide your pick-up details and choose your travel stops while en route.</p>
                         <button className="btn btn-info">Learn more</button>
                 </div>
-                <img src={car2} alt="cars" style={{borderRadius:"10px"}} />
+                <img src={car2} alt="cars" style={{borderRadius:"10px"}} className="car-img" />
             </div>
 
             <div className="extended-bg-container">
-            <img src={car3} alt="cars" style={{borderRadius:"10px"}} />
+            <img src={car3} alt="cars" style={{borderRadius:"10px"}} className="car-img" />
                 <div className="private-transfer-container">
                       <h1>Extended Excursions</h1>
                       <p>Experience top-tier transportation services with Mundi on long-distance journeys from Miami to neighboring cities and regions. Whether it's for business purposes or leisurely exploration of tourist attractions and iconic locales, revel in the lap of luxury within our premium vehicles, accompanied by a private chauffeur.

@@ -46,7 +46,7 @@
   .nav-menu {
     display: flex;
     list-style: none;
-    text-align: center;
+    text-align: start;
     margin-right: 2rem;
   }
   
@@ -64,7 +64,9 @@
   .nav-item {
     line-height: 50px;
     margin-right: 1rem;
+    width: 100%;
   }
+ 
   
   .nav-item:after {
     content: "";
@@ -82,7 +84,7 @@
   
   .nav-item .active {
     color: #000000;
-    padding: 7px;
+    padding: 20px;
     /* background-color: cadetblue; */
   
   }
@@ -98,7 +100,6 @@
     height: 2rem;
   }
   .booknowbtn{
-    
     width: 120px;
     height: 40px;
     margin-top: 10px;
@@ -110,14 +111,20 @@
     .nav-menu {
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
       width: 100%;
-      border-top: 1pxsolid #fff;
+      border-top: 1px solid #fff;
       position: absolute;
       top: 80px;
       left: -110%;
+      border-bottom: 1px solid #bebcbcd8;
       opacity: 1;
+      padding-bottom: 10px;
       overflow: hidden;
       transition: all 0.5s ease;
+    }
+    .nav-item:hover {
+      background-color: #e9e7e7;
     }
   
     .nav-menu.active {
@@ -156,7 +163,7 @@
       color: #000000;
     }
     .booknowbtn{
-      margin-left: 40px;
+      margin-left: 90%;
     }
     .booknowbtn:hover{
      background-color: white;
