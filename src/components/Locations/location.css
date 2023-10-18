@@ -108,6 +108,7 @@
         background-image: linear-gradient(to right,#dfd3ee,#c8afe6,#d3b5f7);
         padding-top: 30px;
         padding-bottom: 30px;
+        margin-bottom: 0px;
     }
     .framing-container {
         width: 90%;

@@ -7,6 +7,7 @@ import About from "./components/About/about";
 import Footer from "./components/Footer/footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Service from "./components/Service/service"; // Corrected import
+import Fleets from "./components/Fleets/fleets";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route exact path="/locations" element={<Location />} />
             <Route exact path="/services" element={<Service />} />
             <Route exact path="/contact" element={<Contact />} />
+            <Route exact path="/fleets" element={<Fleets />} />
           </Routes>
         </div>
         <Footer />
