@@ -117,20 +117,69 @@
         display: none;
     }
     .transport-container {
-        flex-direction: column;
         margin-bottom: 20px;
+        align-items: center;
+        padding-right: 30px;
     }
     .choose-container {
         width: 80%;
     }
     .choose-list-container {
-       flex-wrap: wrap;
-       padding-left: 8pc;
+       padding-left: 0px;
+       align-items: flex-start;
+       justify-content: flex-start;
+       
+    }
+    .choose-list-item-container {
+        width: 200px;
     }
     .view-service-container {
         align-items: flex-start;
         justify-content: flex-start;
         padding-left: 15pc;
     }
+    .about-car-img {
+        width: 40%;
+        height: 40%;
+    }
+    .welcome-container {
+        width: 50%;
+    }
     
+    .welcome-span{
+        display: none;
+    }
+  }
+
+
+  @media (max-width:420px) { 
+    .welcome-container {
+        width: 90%;
+    }
+    .about-container {
+        width: 100%;
+    }
+    .transport-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+    }
+    .about-car-img {
+        width: 90%;
+        height: 50%;
+        margin-bottom: 0px;
+    }
+      .choose-list-container {
+        flex-direction: column;
+      }
+      .choose-list-item-container{
+        width: 100%;
+      }
+      .travel-container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .choose-container {
+        width: 90%;
+      }
   }

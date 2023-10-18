@@ -17,12 +17,12 @@ const About = () => {
                 <div className='welcome-container'>
                     <h1 className="welcome-heading">Welcome to Sincere Transport Services</h1>
                     <p className="welcome-desc">Sincere Transport Services offers a dependable, secure, and budget-friendly MVP Private Car service,
-                        catering to travel between Singapore and Johor Bahru, Legoland Malaysia, as well as various other destinations in Malaysia. Our range of private transport options is designed to meet the unique needs of every traveler, providing private transfers and hire-with-driver services for individuals, families, groups,
-                        and both leisure and business travelers. All our transport services include a dedicated driver, ensuring a seamless and enjoyable journey.
+                        catering to travel between Singapore and Johor Bahru, Legoland Malaysia, as well as various other destinations in Malaysia.<span className="welcome-span"> Our range of private transport options is designed to meet the unique needs of every traveler, providing private transfers and hire-with-driver services for individuals, families, groups,
+                        and both leisure and business travelers.All our transport services include a dedicated driver, ensuring a seamless and enjoyable journey.</span> 
                     </p>
                     <button type='button' className='know-more-bt'>KNOW MORE</button>
                 </div>
-                <img src={car2} alt="car" width={450} style={{marginBottom:"45px"}} />
+                <img src={car2} alt="car" width={450} style={{marginBottom:"45px"}} className="about-car-img" />
             </div>
             <div style={{display:"flex",alignItems:"flex-end",justifyContent:"flex-end"}}>
             <img src={car1} alt="xc" className='half-image' width={300} height={180} style={{marginTop:"40px",borderRadius:"10px",marginRight:"50px",marginTop:"40px"}}/>
