@@ -5,7 +5,7 @@
 .transport-container {
     display: flex;
     gap: 80px;
-    padding-left: 65px;
+    padding-left: 40px;
     margin-bottom: 40px;
     padding-bottom: 30px;
 
@@ -55,9 +55,10 @@
 .travel-container {
     background-color: #d4dfe8;
     min-height: 80vh;
-    padding-left: 65px;
+    padding-left: 40px;
     padding-bottom: 40px;
     padding-top: 67px;
+    padding-right: 20px;
 }
 .choose-container {
     width: 1150px;
@@ -72,12 +73,13 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       width: 380px;
       border: 1px solid #ccc;
       padding: 9px;
       border-radius: 10px;
       background-color: #ccc5;
-      height: 100%;
+      height: 400px;
      
 }
 .safety-heading {
@@ -112,7 +114,7 @@
     justify-content: center;
   }
 
-  @media (max-width:768px) {
+  @media (max-width:968px) {
     .half-image {
         display: none;
     }
@@ -120,6 +122,9 @@
         margin-bottom: 20px;
         align-items: center;
         padding-right: 30px;
+    }
+    .know-more-bt {
+        font-size: 12px;
     }
     .choose-container {
         width: 80%;
@@ -132,11 +137,6 @@
     }
     .choose-list-item-container {
         width: 200px;
-    }
-    .view-service-container {
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding-left: 15pc;
     }
     .about-car-img {
         width: 40%;
