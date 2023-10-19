@@ -8,6 +8,7 @@ import Footer from "./components/Footer/footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Service from "./components/Service/service"; // Corrected import
 import Fleets from "./components/Fleets/fleets";
+import Pricing from "./components/Pricing/pricing";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route exact path="/services" element={<Service />} />
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/fleets" element={<Fleets />} />
+            <Route exact path="/pricing" element={<Pricing />} />
           </Routes>
         </div>
         <Footer />

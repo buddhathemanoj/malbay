@@ -1,0 +1,33 @@
+.collapsible-button-container {
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.9s;
+    
+}
+.collapse-list-item {
+    width: 300px;    
+}
+.content {
+    padding-top: 10px;
+   border-right: 1px solid #ccc;
+   border-left: 1px solid #ccc;
+   border-bottom: 1px solid #ccc;
+    width: 300px;
+}
+.collapsible-button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+   width: 100%;
+   height: 100%;
+   font-weight: bold;
+}
+.collapsible-button-container:hover {
+    background-color:#337CCF;
+}
+.collapsible-button:hover {
+    color: #fff;
+}
