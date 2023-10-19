@@ -125,7 +125,7 @@
     }
     .car-details-list-container {
         flex-direction: row;
-        gap: 40px;
+        gap: 30px;
         padding-left: 0px;
         flex-wrap: wrap;
     }
@@ -156,7 +156,7 @@
         text-align: center;
      }
      .fleets-top-container {
-        height: 58vh;
+        height: 60vh;
      }
      .innova-heading-container {
         width: 88%;
