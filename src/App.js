@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Service from "./components/Service/service"; // Corrected import
 import Fleets from "./components/Fleets/fleets";
 import Pricing from "./components/Pricing/pricing";
+import FloatButtons from "./components/Floats/Float";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           </Routes>
         </div>
         <Footer />
+        <FloatButtons/>
       </Router>
     </>
   );
