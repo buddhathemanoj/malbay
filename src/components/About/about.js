@@ -1,5 +1,6 @@
 import React from "react"
 import  {RedirectFunction} from "react-router-dom"
+import { Link } from "react-router-dom"
 import driverpic from '../driver.png'
 import car1 from '../alphard-blue.png'
 import car2 from '../alphard-white.png'
@@ -51,7 +52,7 @@ const About = () => {
                           </li>
                     </ul>
                     <div className='view-service-container'>
-                    <button type='button' className='know-more-bt'>VIEW SERVICE</button>
+                <Link to='/services'>    <button type='button' className='know-more-bt'>VIEW SERVICES</button></Link>
                     </div>
             </div>
         </div>
