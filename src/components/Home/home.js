@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 
  const Home = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -193,7 +194,7 @@ Hyundai Starex : SGD 130
 </div>
 
 </div>
-<button className="clasicbtn">BOOK NOW</button>
+<Link to='/booking'> <button className="clasicbtn">BOOK NOW</button></Link>
 
       </div>
   
@@ -210,7 +211,7 @@ Hyundai Starex : SGD 130
                     </div>
                 ))}
             </div>
-            <button className="know-more-btn">Know More</button>
+          <Link to='/pricing'>  <button className="know-more-btn">Know More</button></Link>
         </div>
         <div className="content-wrapper">
     <h3>THE PERFECT SEAT</h3>

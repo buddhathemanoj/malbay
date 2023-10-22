@@ -10,6 +10,7 @@ import Service from "./components/Service/service"; // Corrected import
 import Fleets from "./components/Fleets/fleets";
 import Pricing from "./components/Pricing/pricing";
 import FloatButtons from "./components/Floats/Float";
+import { Booking } from "./components/Booking/Booking";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/fleets" element={<Fleets />} />
             <Route exact path="/pricing" element={<Pricing />} />
+            <Route exact path="/booking" element={<Booking />} />
           </Routes>
         </div>
         <Footer />
