@@ -114,8 +114,16 @@
         
       }
       
-  
-      
+      .contact-container {
+       
+        background-size: contain;
+       
+      }
+      .background-image img {
+        width: 100%;
+     background-size: contain;  
+        height: 20vh;
+      }
       .contact-info h1 {
 font-size: 22px;
       }
