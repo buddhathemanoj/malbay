@@ -102,4 +102,35 @@
     .contact-details {
         flex-direction: column;
       }
+
+      .contactparas h1 {
+        font-weight: 500;
+        font-size: 24px;
+      }
+      
+      .contactparas h3 {
+        font-size: 18px;
+        line-height: 1.2;
+        
+      }
+      
+  
+      
+      .contact-info h1 {
+font-size: 22px;
+      }
+      
+      .contact-info h3 {
+        font-size: 18px;
+        color: #333333 !important;
+      }
+      
+    
+      
+   
+      .book-car-service button {
+     
+        width: 300px;
+      
+      }
   }
