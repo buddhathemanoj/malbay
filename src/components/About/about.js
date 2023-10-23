@@ -1,6 +1,6 @@
 import React from "react"
 import  {RedirectFunction} from "react-router-dom"
-import { Link } from "react-router-dom"
+import { Link ,useNavigate} from "react-router-dom"
 import driverpic from '../driver.png'
 import car1 from '../alphard-blue.png'
 import car2 from '../alphard-white.png'
@@ -11,7 +11,17 @@ import { FaTrophy } from "react-icons/fa";
 import "./about.css"
 
 const About = () => {
-    
+    const navigate = useNavigate();
+const handleKnowmore=()=>{
+    navigate('/booking');
+
+    window.scrollTo(0, 0);
+}
+const handleServices=()=>{
+    navigate('/services');
+
+    window.scrollTo(0, 0);
+}
     return(
         <div className="about-container">
             <div className="transport-container">
@@ -21,7 +31,7 @@ const About = () => {
                         catering to travel between Singapore and Johor Bahru, Legoland Malaysia, as well as various other destinations in Malaysia.<span className="welcome-span"> Our range of private transport options is designed to meet the unique needs of every traveler, providing private transfers and hire-with-driver services for individuals, families, groups,
                         and both leisure and business travelers.All our transport services include a dedicated driver, ensuring a seamless and enjoyable journey.</span> 
                     </p>
-                    <button type='button' className='know-more-bt'>KNOW MORE</button>
+                    <button type='button' onClick={handleKnowmore} className='know-more-bt'>KNOW MORE</button>
                 </div>
                 <img src={car2} alt="car" width={450} style={{marginBottom:"45px"}} className="about-car-img" />
             </div>
@@ -52,7 +62,7 @@ const About = () => {
                           </li>
                     </ul>
                     <div className='view-service-container'>
-                <Link to='/services'>    <button type='button' className='know-more-bt'>VIEW SERVICES</button></Link>
+                <button type='button'onClick={handleServices} className='know-more-bt'>VIEW SERVICES</button>
                     </div>
             </div>
         </div>

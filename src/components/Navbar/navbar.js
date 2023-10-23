@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "../Icons";
 import "./navbar.css"
 
@@ -96,7 +96,7 @@ function Navbar() {
               </NavLink>
             </li>
             <li >
-          <button   onClick={handleClick} className="booknowbtn">BOOK NOW</button>
+      <Link to='/booking'>    <button   onClick={handleClick} className="booknowbtn">BOOK NOW</button></Link>
             </li>
           </ul>
           <div className="nav-icon" onClick={handleClick}>
