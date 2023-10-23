@@ -1,6 +1,31 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import '../Home/home.css'
+import axios from 'axios';
 export const Booking =()=>{
+  const [countries, setCountries] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://restcountries.com/v3.1/all');
+        
+        if (response.status === 200) {
+          const countriesData = response.data;
+          
+          const countryNames = countriesData.map(country => country.name.common);
+          setCountries(countryNames);
+        } else {
+          console.error('Failed to fetch data from the API');
+        }
+      } catch (error) {
+        console.error('Error:', error.message);
+      }
+    };
+
+    fetchData(); 
+  }, []);
+
+
     return(
         <div style={{padding:'2% 6%'}}>
               <div className="form-container">
@@ -32,9 +57,11 @@ export const Booking =()=>{
                <select className="form-control" placeholder="Country">
                  {/* Example countries */}
                  <option value="" disabled selected>Select Country</option>
-                 <option value="USA">USA</option>
-                 <option value="Canada">Canada</option>
-                 {/* ... other countries ... */}
+                 {countries.map((country, index) => (
+                <option key={index} value={country}>
+                  {country}
+                </option>
+              ))}
                </select>
              </div>
        
