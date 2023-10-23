@@ -9,11 +9,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
  const Home = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
-
+  const navigate = useNavigate();
   const toggleForm = () => {
     setIsFormOpen(!isFormOpen);
   };
@@ -31,6 +31,14 @@ import { Link } from "react-router-dom";
 
     }
 };
+const handleBooking=()=>{
+  navigate('/booking');
+  window.scrollTo(0, 0);
+}
+const handlePricing = ()=>{
+  navigate('/pricing');
+  window.scrollTo(0, 0);
+}
 
 
     const accordionItems = [
@@ -58,8 +66,10 @@ Hyundai Starex : SGD 130
     };
   return (
     <div className="home">
-      <div className="homequote"><h1>EXPLORE DESTINATIONS,<br />
-        WITH DISTINCTION.</h1></div>
+ <div className="homequote">
+  <h1 className="animated-heading">EXPLORE DESTINATIONS,<br />WITH DISTINCTION.</h1>
+</div>
+
       <div className="bgpic" style={{ backgroundImage: `url(${citypic})` }}>
       </div>
       <div className="homecontparas">
@@ -194,7 +204,7 @@ Hyundai Starex : SGD 130
 </div>
 
 </div>
-<Link to='/booking'> <button className="clasicbtn">BOOK NOW</button></Link>
+ <button className="clasicbtn" onClick={handleBooking}>BOOK NOW</button>
 
       </div>
   
@@ -211,7 +221,7 @@ Hyundai Starex : SGD 130
                     </div>
                 ))}
             </div>
-          <Link to='/pricing'>  <button className="know-more-btn">Know More</button></Link>
+          <Link to='/pricing'>  <button onClick={handlePricing} className="know-more-btn">Know More</button></Link>
         </div>
         <div className="content-wrapper">
     <h3>THE PERFECT SEAT</h3>
