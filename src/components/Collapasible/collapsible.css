@@ -17,6 +17,7 @@
    border-left: 1px solid #ccc;
    border-bottom: 1px solid #ccc;
     width: 300px;
+  
     justify-items: center;
     align-items: center;
     display: flex;
@@ -60,7 +61,7 @@
 }
 .carlists{
     list-style: none;
-    line-height: 8px;
+    line-height: 18px;
   
 }
 .pararara{

@@ -1,20 +1,25 @@
 import React from 'react';
 import './Float.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone } from '@fortawesome/free-solid-svg-icons'; // Import the phone icon from solid icons
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'; // Import the WhatsApp icon from brand icons
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const FloatButtons = () => {
-  const phoneNumber = '6369487527'; // Replace with your phone number
-  const whatsappNumber = '6369487527'; // Replace with your WhatsApp number
+  const phoneNumber = '+6582335292';
+  const whatsappNumber = '+6582335292';
+
+  const handlePhoneClick = () => {
+    // Redirect to the WhatsApp call link when the phone icon is clicked
+    window.location.href = `https://wa.me/${whatsappNumber}`;
+  };
 
   return (
     <div className="float-buttons">
       <a href={`tel:${phoneNumber}`} className="contact-button">
-        <FontAwesomeIcon icon={faPhone} /> 
+        <FontAwesomeIcon icon={faPhone} onClick={handlePhoneClick} />
       </a>
       <a href={`https://wa.me/${whatsappNumber}`} className="whatsapp-button">
-        <FontAwesomeIcon icon={faWhatsapp} /> 
+        <FontAwesomeIcon icon={faWhatsapp} />
       </a>
     </div>
   );
