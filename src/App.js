@@ -11,6 +11,8 @@ import Fleets from "./components/Fleets/fleets";
 import Pricing from "./components/Pricing/pricing";
 import FloatButtons from "./components/Floats/Float";
 import { Booking } from "./components/Booking/Booking";
+import Destination from "./components/Destination/destination";
+import Payment from "./components/Payment/payment";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
             <Route exact path="/fleets" element={<Fleets />} />
             <Route exact path="/pricing" element={<Pricing />} />
             <Route exact path="/booking" element={<Booking />} />
+            <Route exact path="/destination" element={<Destination />} />
+            <Route exact path="/payment" element={<Payment />} />
           </Routes>
         </div>
         <Footer />

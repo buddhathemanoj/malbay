@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Collapse } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import "./pricing.css"
-import '../Collapasible/collapsible.css'
+import { ImLocation2 } from "react-icons/im";
+import "./destination.css"
 
-const Pricing = () => {
+const Destination = () => {
     const [pricingArr, setPricingArr] = useState([]);
     const [openCollapsible, setOpenCollapsible] = useState(null); // State to track open collapsible item
     const navigate = useNavigate();
@@ -29,25 +29,20 @@ const Pricing = () => {
             .get('http://localhost:3005/api/packages/getallpackages')
             .then((response) => {
                 setPricingArr(response.data);
-                console.log(response.data)
             })
             .catch((error) => {
                 console.error('Error fetching pricingArr:', error);
             });
     }, []);
 
-    return (
-        <div className="pricing-bg-container">
-            <div className="pricing-top-bg-container">
-                <h1 className="pricing-heading">UNBEATABLE AFFORDABILITY</h1>
-                <h4 className="pricing-desc">
-                    We take pride in offering the most unbeatable rates for your journeys
-                    between Singapore and Malaysia, departing from your chosen locations at
-                    your preferred times. Your cost-effective and convenient travel
-                    experience begins with us.
-                </h4>
+
+    return(
+        <div>
+            <div className='destination-heading-container'> 
+            <h1 className='destination-heading'>SELECT A LOCATION <ImLocation2/> <span></span></h1>
             </div>
-            <ul className="pricing-list-container">
+          
+           <ul className="pricing-list-container">
                 {pricingArr.map((pricingData, index) => (
                     <li key={pricingData._id} className="collapse-list-item">
                         <div className='collapsible-button-container'>
@@ -73,7 +68,7 @@ const Pricing = () => {
                 ))}
             </ul>
         </div>
-    );
-};
+    )
+}
 
-export default Pricing;
+export default Destination

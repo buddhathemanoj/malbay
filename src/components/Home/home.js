@@ -41,6 +41,7 @@ const handlePricing = ()=>{
 }
 
 
+
     const accordionItems = [
         'SENAI AIRPORT',
         'KSL CITY MALL',
@@ -180,7 +181,7 @@ Hyundai Starex : SGD 130
        
            {/* Submit Button */}
            <div className="mt-3">
-             <button type="submit" className="btn btn-primary btn-block">Submit</button>
+             <button type="submit" className="btn btn-primary btn-block" >Submit</button>
            </div>
          </form>
        </div>

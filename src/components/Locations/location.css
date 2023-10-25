@@ -54,9 +54,9 @@
     color: #ffff;
     width: 160px;
     border: 1px solid #3498db;
-    transition: background-color 0.5s ease;
     margin-top: 15px;
     font-weight: bold;
+    transition: background-color 0.5s ease;
     animation: shadow-blink 3s infinite; 
 }
 .book-now-btn:hover {
