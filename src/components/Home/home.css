@@ -9,6 +9,20 @@
     padding: 20px;
     padding-left: 70px;
 }
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Apply the animation to the animated-heading element */
+  .animated-heading {
+    opacity: 0; /* Start with 0 opacity (invisible) */
+    animation: fadeIn 2s ease forwards; /* Apply the fadeIn animation with a 1-second duration */
+  }
 .Headinghome{
     text-align: center;
     font-family: Oswald,Sans-serif;

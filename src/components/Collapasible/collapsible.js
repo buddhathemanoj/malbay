@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import "./collapsible.css"
 
-const Collapsible = (props) => {
-    const {eachArr} = props
-  const [isCollapsed, setCollapsed] = useState(false);
 
+const Collapsible = (props) => {
+    const {eachArr } = props
+  const [isCollapsed, setCollapsed] = useState(false);
+  const navigate = useNavigate();
   const toggleCollapsible = () => {
     setCollapsed(!isCollapsed);
   };
-
+  const handleBookNowClick = () => {
+    navigate('/booking');
+    window.scrollTo(0, 0);
+  };
   return (
     <li className="collapse-list-item">
         <div className='collapsible-button-container'> 
@@ -17,12 +22,20 @@ const Collapsible = (props) => {
       </button>
       </div>
       {isCollapsed && (
-        <div className="content">
-          <p>This is the collapsible content. It can be hidden or shown with the button above.</p>
-        </div>
+       <div className="content">
+       <div className="flex-container">
+         <ul className='carlists'>
+           <li><p className='pararara'>Toyota Innova : SGD 100</p></li>
+           <li><p className='pararara'>Toyota Alphard : SGD 130</p></li>
+           <li><p className='pararara'>Hyundai Starex : SGD 130</p></li>
+         </ul>
+         <button className='clasicbookkbtn' onClick={handleBookNowClick}>Book Now</button>       </div>
+     </div>
+     
       )}
     </li>
   );
 }
+
 
 export default Collapsible;
