@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import '../Home/home.css';
 
-export const Booking = () => {
+export const Booking = (props) => {
+  console.log(props)
   const navigate = useNavigate();
   const [countries, setCountries] = useState([]);
+  const [dropLocations, setLocation] = useState({})
   const [newBooking, setBooking] = useState({});
-  
+  const [car, setCars] = useState([]) //car details array
+
+  const { id } = useParams(); //get id from route
+
+
   const [formData, setFormData] = useState({
     name: "",
     country: "",
@@ -24,7 +30,9 @@ export const Booking = () => {
     pickupDate: "",
   });
 
-  
+
+  console.log(formData.dropLocation)
+
   const clickToPayPage = (event) => {
     event.preventDefault();
     console.log(formData);
@@ -42,7 +50,7 @@ export const Booking = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get('https://restcountries.com/v3.1/all');
-        
+
         if (response.status === 200) {
           const countriesData = response.data;
           const countryNames = countriesData.map(country => country.name.common);
@@ -55,8 +63,31 @@ export const Booking = () => {
       }
     };
 
+    const locationData = async () => {
+      try {
+        const response = await axios.get(`http://localhost:3005/api/packages/getpackage/${id}`)
+
+        if (response.status === 200) {
+          const locData = response.data
+          setLocation(locData)
+          console.log(response.data);
+          setCars(response.data.cars)
+        }
+        else {
+          console.error("Failed to fetch data from the API")
+          console.log("error");
+        }
+      } catch (error) {
+        console.error('Error:', error.message);
+      }
+    }
     fetchData();
+    locationData();
   }, []);
+
+  const { location } = dropLocations
+
+
 
   return (
     <div style={{ padding: '2% 6%' }}>
@@ -144,9 +175,8 @@ export const Booking = () => {
                 onChange={handleInputChange}
                 required
               >
-               <option  value="" >Select Car</option>
-                <option value="Sedan">Sedan</option>
-                <option value="SUV">SUV</option>
+                <option value="">Select cars</option>
+                {car.map((eachCar) => <option value={eachCar.carName}>{eachCar.carName}</option>)}
               </select>
             </div>
             {/* Pickup Date */}
@@ -170,7 +200,7 @@ export const Booking = () => {
                 required
               >
                 <option value="" >Select Pickup Time</option>
-                <option  value="09:00">09:00 AM</option>
+                <option value="09:00">09:00 AM</option>
                 <option value="10:00">10:00 AM</option>
               </select>
             </div>
@@ -192,8 +222,9 @@ export const Booking = () => {
                 name="dropLocation"
                 className="form-control"
                 placeholder="Drop Off Location"
-                required
                 onChange={handleInputChange}
+                value={location}
+                required
               />
             </div>
             {/* Flight Info */}

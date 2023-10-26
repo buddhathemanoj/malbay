@@ -6,14 +6,22 @@
 }
 .payment-bg-container {
     padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    min-height: 80vh;
+    align-items: center;
+    justify-content: center;
 }
 .payment-location {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     margin-bottom: 10px;
     font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .payment-destination {
-    color: rgb(94, 93, 93);
+    color: rgb(186, 184, 184);
     font-size: 15px;
 }
 .payment-pay-btn {
@@ -36,7 +44,7 @@
 }
 @keyframes shadow-blink-pay {
     0% {
-      box-shadow: 0 0 10px rgb(253, 182, 1);
+      box-shadow: 0 0 10px rgb(255, 194, 40);
     }
     50% {
       box-shadow: 0 0 20px rgb(230, 179, 50);
@@ -47,10 +55,91 @@
   }
 
   .payment-card-container {
-    background-color: #ccc3;
-    border: 1px solid #ccc;
-    width: 550px;
+    width: 300px;
     padding: 18px;
-    border-radius: 10px;
+    background-color: #3D30A2;
+    height: 100%;
+    color: #fff;
+    border-bottom-left-radius: 9px;
+    border-top-left-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    justify-content: center;
+  }
+  .payment-image-container {
+    background-image: url("https://designmodo.com/wp-content/uploads/2017/08/gradient-1.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 100%;
+    flex-direction: column;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+  }
+  .detail-image-container {
+    width: 800px;
+    height: 80vh;
     box-shadow: 0 0 4px #ccc;
+    border-radius: 9px;
+    display: flex;
+    padding-bottom: 0px;
+    justify-content: space-between;
+    
+  }
+  .qr-code-image {
+    border: 5px solid #ccc;
+    border-radius: 7px;
+  }
+  .cancel-payment-btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #fff;
+    margin-top: 40px;
+  }
+  .cancel-payment-btn:hover {
+    color: #ff0f0f;
+    
+  }
+  .invoice-heading {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  }
+  .invoice-desc {
+    max-width: 250px;
+    text-align: center;
+  }
+
+  @media (max-width:568px) {
+    .detail-image-container {
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+    .payment-bg-container {
+      display: block;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+    .payment-card-container {
+      width: 100%;
+      height: 60vh;
+      border-radius: 0px;
+      height: 100%;
+    }
+
+    .payment-image-container {
+      width: 100%;
+      border-radius: 0px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .payment-location {
+
+    }
   }

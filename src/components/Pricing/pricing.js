@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Collapse } from 'antd';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { BallTriangle } from 'react-loader-spinner';
 import "./pricing.css"
 import '../Collapasible/collapsible.css'
 
 const Pricing = () => {
     const [pricingArr, setPricingArr] = useState([]);
+    const [isLoader, setLoader] = useState(true)
     const [openCollapsible, setOpenCollapsible] = useState(null); // State to track open collapsible item
     const navigate = useNavigate();
 
@@ -18,18 +20,19 @@ const Pricing = () => {
             setOpenCollapsible(index); // Open the clicked collapsible
         }
     };
-
-    const handleBookNowClick = () => {
-        navigate('/booking');
-        window.scrollTo(0, 0);
-    };
+ 
+    // const {_id} = pricingArr
+    // const handleBookNowClick = () => {
+    //     navigate(`/booking/${_id}`);
+    //     window.scrollTo(0, 0);
+    // };
 
     useEffect(() => {
         axios
             .get('http://localhost:3005/api/packages/getallpackages')
             .then((response) => {
                 setPricingArr(response.data);
-                console.log(response.data)
+                setLoader(!isLoader)
             })
             .catch((error) => {
                 console.error('Error fetching pricingArr:', error);
@@ -47,7 +50,9 @@ const Pricing = () => {
                     experience begins with us.
                 </h4>
             </div>
-            <ul className="pricing-list-container">
+            {isLoader ? <div className='loader-container'>
+                <BallTriangle type="ThreeDots" color="#C70039" height={50} width={50} />
+            </div> :   <ul className="pricing-list-container">
                 {pricingArr.map((pricingData, index) => (
                     <li key={pricingData._id} className="collapse-list-item">
                         <div className='collapsible-button-container'>
@@ -65,13 +70,14 @@ const Pricing = () => {
                                             </li>
                                         ))}
                                     </ul>
-                                    <button className='clasicbookkbtn' onClick={handleBookNowClick}>Book Now</button>
+                                <Link to={`/booking/${pricingData._id}`}><button className='clasicbookkbtn' >Book Now</button></Link>    
                                 </div>
                             </div>
                         )}
                     </li>
                 ))}
-            </ul>
+            </ul>}
+          
         </div>
     );
 };

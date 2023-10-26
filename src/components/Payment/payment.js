@@ -1,7 +1,7 @@
 import {useParams} from "react-router-dom"
 import { ImLocation2 } from "react-icons/im";
 import { BiTransferAlt } from "react-icons/bi";
-import qrCode from "../../asset/WhatsApp Image 2023-10-25 at 10.58.26 AM.jpeg"
+import qrCode from "../../asset/WhatsApp_Image_2023-10-25_at_10.58.26_AM-removebg-preview.png"
 import "./payment.css"
 
 const Payment = () => {
@@ -18,10 +18,17 @@ const Payment = () => {
                     <hr/>
                     <h3 className="payment-location">Price : <span className="payment-destination">600</span></h3>
                     <h3 className="payment-location">GST : <span className="payment-destination">70</span></h3>
-                    <h3 className="payment-location">Total : <span className="payment-destination">670</span></h3>
-                    <button className="payment-pay-btn">Pay Now</button>
+                    <hr/>
+                    <h3 className="payment-location">Amount : <span className="payment-destination">670</span></h3>
+
+                    <button className="cancel-payment-btn">Cancel Payment</button>
                 </div>
-                <img src={qrCode} alt="qr code" className="qr-code-image" width={300} />
+                <div className="payment-image-container">
+                    <h2 className="invoice-heading">Pay Invoice</h2>
+                    <p className="invoice-desc">Scan QR code with your DagWallet to proceed with payment</p>
+                <img src={qrCode} alt="qr code" className="qr-code-image" width={200} />
+                <button className="payment-pay-btn">Pay Now</button>
+                </div>
             </div>
         </div>
     )

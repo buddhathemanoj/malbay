@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Collapse } from 'antd';
 import { useNavigate } from 'react-router-dom';
+import { BallTriangle } from 'react-loader-spinner';
 import { ImLocation2 } from "react-icons/im";
 import "./destination.css"
 
 const Destination = () => {
     const [pricingArr, setPricingArr] = useState([]);
+    const [isLoader, setLoader] = useState(true)
     const [openCollapsible, setOpenCollapsible] = useState(null); // State to track open collapsible item
     const navigate = useNavigate();
 
@@ -29,6 +31,7 @@ const Destination = () => {
             .get('http://localhost:3005/api/packages/getallpackages')
             .then((response) => {
                 setPricingArr(response.data);
+                setLoader(!isLoader)
             })
             .catch((error) => {
                 console.error('Error fetching pricingArr:', error);
@@ -41,8 +44,10 @@ const Destination = () => {
             <div className='destination-heading-container'> 
             <h1 className='destination-heading'>SELECT A LOCATION <ImLocation2/> <span></span></h1>
             </div>
-          
-           <ul className="pricing-list-container">
+
+            {isLoader ? <div className='loader-container'>
+                <BallTriangle type="ThreeDots" color="#C70039" height={50} width={50} />
+            </div> :  <ul className="pricing-list-container">
                 {pricingArr.map((pricingData, index) => (
                     <li key={pricingData._id} className="collapse-list-item">
                         <div className='collapsible-button-container'>
@@ -66,7 +71,9 @@ const Destination = () => {
                         )}
                     </li>
                 ))}
-            </ul>
+            </ul>}
+          
+          
         </div>
     )
 }

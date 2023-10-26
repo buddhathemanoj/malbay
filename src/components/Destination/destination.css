@@ -19,3 +19,15 @@
     align-items: center;
     justify-content: center;
 }
+
+.loader-container {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width:568px) {
+    .destination-heading-container {
+        width: 100%;
+    }
+}
