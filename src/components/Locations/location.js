@@ -8,7 +8,7 @@ const Location = () => {
 
     const navigate = useNavigate();
     const handleBookNow=()=>{
-        navigate('/booking');
+        navigate('/destination');
     
         window.scrollTo(0, 0);
     }

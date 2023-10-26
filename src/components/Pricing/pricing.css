@@ -31,8 +31,15 @@
 .pricing-list-container{
     display: flex;
     list-style-type: none;
-    gap: 35px;
+    gap: 10px;
     flex-wrap: wrap;
     padding-top: 40px;
     padding-bottom: 40px;
+    padding-left: 15px;
+}
+
+@media (max-width:568px) {
+    .pricing-list-container {
+        justify-content: center;
+    }
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, RedirectFunction } from "react-router-dom";
 import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "../Icons";
 import "./navbar.css"
 
@@ -13,8 +13,8 @@ function Navbar() {
         <div className="nav-container">
           <NavLink exact to="/" className="nav-logo">
             <span>MalBay Express</span>
-           
-          
+
+
           </NavLink>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>
@@ -81,7 +81,7 @@ function Navbar() {
                 className="nav-links"
                 onClick={handleClick}
               >
-               PRICING
+                PRICING
               </NavLink>
             </li>
             <li className="nav-item">
@@ -96,7 +96,7 @@ function Navbar() {
               </NavLink>
             </li>
             <li >
-      <Link to='/booking'>    <button   onClick={handleClick} className="booknowbtn">BOOK NOW</button></Link>
+              <Link to='/destination'>    <button onClick={handleClick} className="booknowbtn">BOOK NOW</button></Link>
             </li>
           </ul>
           <div className="nav-icon" onClick={handleClick}>
