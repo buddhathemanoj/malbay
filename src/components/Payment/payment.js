@@ -40,6 +40,9 @@ useEffect(() => {
   }
 }, [numericPrice]);
 
+const clickToCancel = () => {
+  window.history.back()
+}
 // Log values to console
 console.log('GST Amount:', gst);
 console.log('Total Price:', totalPrice);
@@ -60,7 +63,7 @@ console.log('Total Price:', totalPrice);
                     <hr/>
                     <h6 className="payment-location">Amount  <span className="payment-destination"><b>S${totalPrice}</b></span></h6>
 
-                    <button className="cancel-payment-btn">Cancel Payment</button>
+                    <button className="cancel-payment-btn" onClick={clickToCancel}>Cancel Payment</button>
                 </div>
                 <div className="payment-image-container">
 

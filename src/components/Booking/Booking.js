@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import '../Home/home.css';
+import "./Booking.css"
 
 export const Booking = (props) => {
   console.log(props)
@@ -10,6 +11,7 @@ export const Booking = (props) => {
   const [dropLocations, setLocation] = useState({})
   const [newBooking, setBooking] = useState({});
   const [car, setCars] = useState([]) //car details array
+  const [isHovered, setHover] = useState(false)
 
   const { id } = useParams(); //get id from route
 
@@ -33,21 +35,21 @@ export const Booking = (props) => {
 
   useEffect(() => {
     if (dropLocations.location) {  // Check if location is defined to avoid setting undefined
-        setFormData(prevFormData => ({
-            ...prevFormData,
-            dropLocation: dropLocations.location,
-        }));
+      setFormData(prevFormData => ({
+        ...prevFormData,
+        dropLocation: dropLocations.location,
+      }));
     }
-}, [dropLocations]);
+  }, [dropLocations]);
   console.log(formData.dropLocation)
   const sendEmail = async (formData) => {
     try {
-        const response = await axios.post('hhttps://sg2mycabsing.onrender.com/api/contactform/booking/form', formData);
-        console.log('Email sent:', response.data);
+      const response = await axios.post('hhttps://sg2mycabsing.onrender.com/api/contactform/booking/form', formData);
+      console.log('Email sent:', response.data);
     } catch (error) {
-        console.error('Error sending email:', error);
+      console.error('Error sending email:', error);
     }
-};
+  };
   const clickToPayPage = (event) => {
     event.preventDefault();
     console.log(formData);
@@ -61,16 +63,16 @@ export const Booking = (props) => {
 
     // Pass the id, formData, and selectedCarPrice to the Payment component via the state prop
     navigate("/payment", {
-        state: {
-            id,
-            formData,
-            selectedCarPrice
-        }
+      state: {
+        id,
+        formData,
+        selectedCarPrice
+      }
     });
 
     window.scrollTo(20, 20);
     sendEmail(formData);
-}
+  }
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -115,6 +117,22 @@ export const Booking = (props) => {
     fetchData();
     locationData();
   }, []);
+
+  console.log(formData.pickupTime)
+  const clickToBack = () => {
+    navigate("/pricing")
+  }
+
+  const handleMouseEnter = () => {
+    setHover(true)
+  }
+
+  const handleMouseLeave = () => {
+    setHover(false)
+  }
+
+  const checkFill = formData.children.length
+
 
   const { location } = dropLocations
 
@@ -221,9 +239,11 @@ export const Booking = (props) => {
                 onChange={handleInputChange}
               />
             </div>
+
             {/* Pickup Time */}
             <div className="col-md-6 mb-3">
-              <select
+
+              {/* <select
                 name="pickupTime"
                 className="form-control"
                 placeholder="Pickup Time"
@@ -233,8 +253,14 @@ export const Booking = (props) => {
                 <option value="" >Select Pickup Time</option>
                 <option value="09:00">09:00 AM</option>
                 <option value="10:00">10:00 AM</option>
-              </select>
+              </select> */}
+
+              <input type='time'
+                className="input-time form-control"
+                name="pickupTime"
+                onChange={handleInputChange} />
             </div>
+
             {/* Pickup Location */}
             <div className="col-md-6 mb-3">
               <input
@@ -301,10 +327,15 @@ export const Booking = (props) => {
             </div>
           </div>
           {/* Submit Button */}
-          <div className="mt-3">
-            <button type="submit" className="btn btn-primary btn-block">
-              Submit
+          <div className="back-next-btn-container">
+            <button type="button" className="btn btn-primary back-btn" onClick={clickToBack}>
+              Back
             </button>
+
+            <button type="submit" className={`btn btn-primary back-btn ${checkFill === 0 ? "no-access-btn" : ""}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              Next
+            </button>
+
           </div>
         </form>
       </div>

@@ -13,10 +13,7 @@ function Navbar() {
         <div className="nav-container">
           <NavLink exact to="/" className="nav-logo">
             <span>MalBay Express</span>
-
-
           </NavLink>
-
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <NavLink

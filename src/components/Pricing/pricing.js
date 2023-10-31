@@ -71,24 +71,23 @@ const Pricing = () => {
                                         ))}
                                     </ul>
                                     <div style={{ textAlign: 'center' }}>
-    <Link to={`/booking/${pricingData._id}`}>
-        <div class="box-1">
-          <div class="btn btn-one">
-            <span>Book Now</span>
-          </div>
-        </div>
-    </Link>
-</div>
+                                        <Link to={`/booking/${pricingData._id}`} className='pricing-link-btn'>
+                                            <div class="box-1">
+                                                <div class="btn btn-one">
+                                                    <span>Book Now</span>
+                                                </div>
+                                            </div>
+                                        </Link>
+                                    </div>
 
 
                                 </div>
-
+                               
                             </div>
                         )}
                     </li>
                 ))}
             </ul>}
-
         </div>
     );
 };
