@@ -81,12 +81,12 @@
     background-color: #4D4C7D;
 }
 
-.btn {
+.learn-more-btn {
     background-color: #0dcaf0 !important;
     color: #fff;
     font-weight: bold;
 }
-.btn:hover {
+.learn-more-btn:hover {
     color: #FFF;
     background-color: #088ea9 !important;
 }
