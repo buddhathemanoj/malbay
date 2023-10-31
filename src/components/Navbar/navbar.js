@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link, NavLink, RedirectFunction } from "react-router-dom";
 import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "../Icons";
 import "./navbar.css"
-
+import logo from '../../asset/logo3.png'
+import logo1 from '../../asset/logo2.png'
 function Navbar() {
   const [click, setClick] = useState(false);
 
@@ -11,9 +12,12 @@ function Navbar() {
     <>
       <nav className="navbar">
         <div className="nav-container">
-          <NavLink exact to="/" className="nav-logo">
-            <span>MalBay Express</span>
+          <div className="logo-wrapper">
+              <NavLink exact to="/" className="nav-logo">
+           <img className="icon" style={{alignContent:'left'}} src={logo} alt="Sg2Mycab" />
           </NavLink>
+          </div>
+        
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <NavLink
