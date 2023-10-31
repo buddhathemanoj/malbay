@@ -9,6 +9,12 @@
     padding: 20px;
     padding-left: 70px;
 }
+.know-more-link-btn {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
 @keyframes fadeIn {
     from {
       opacity: 0;

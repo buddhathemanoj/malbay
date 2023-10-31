@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, NavLink, RedirectFunction } from "react-router-dom";
 import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "../Icons";
 import "./navbar.css"
-import logo from '../../asset/logo3.png'
+import logo from '../../asset/Sg2Mycab-logos_black.png'
 import logo1 from '../../asset/logo2.png'
 function Navbar() {
   const [click, setClick] = useState(false);

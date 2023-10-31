@@ -45,7 +45,7 @@ const Service = () => {
                   <h1>Airport Transfers Made Easy</h1>
                   <p>Celebrate Your Travels with Confidence and Convenience through Sg2Mycab Express transport solutions. Our 24/7 dedicated operations department ensures a seamless experience for business and leisure travelers alike, accommodating groups of any size. Opt for Sg2Mycab to guarantee a luxurious and secure journey to the airport, promising both style and serenity for your travels.
                     </p>
-                <button className="btn btn-info" onClick={handleLearnmore}>Learn more</button>
+                <button className="btn btn-info learn-more-btn" onClick={handleLearnmore}>Learn more</button>
             </div>
             <img src={car} alt="cars" style={{borderRadius:"10px"}} className="car-img" />
         </div>

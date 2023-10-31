@@ -214,7 +214,7 @@ Hyundai Starex : SGD 130
             </div>
           ))}
         </div>
-        <Link to='/pricing'>  <button onClick={handlePricing} className="know-more-btn">Know More</button></Link>
+        <Link to='/pricing' className="know-more-link-btn">  <button onClick={handlePricing} className="know-more-btn">Know More</button></Link>
       </div>
       <div className="content-wrapper">
         <h3>THE PERFECT SEAT</h3>

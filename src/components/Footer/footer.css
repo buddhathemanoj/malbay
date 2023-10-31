@@ -14,4 +14,22 @@
   }
   footer a:hover {
     text-decoration: underline;
+    
+  }
+  .home-about-footer-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (max-width:568px) {
+    .home-about-footer-container {
+      justify-content: flex-start;
+      padding-left: 30px;
+    }
+    .contact-footer-container {
+      padding-left: 30px;
+    }
+    .footer-first-container {
+      padding-left: 30px;
+    }
   }
