@@ -44,7 +44,7 @@ export const Booking = (props) => {
   console.log(formData.dropLocation)
   const sendEmail = async (formData) => {
     try {
-      const response = await axios.post('hhttps://sg2mycabsing.onrender.com/api/contactform/booking/form', formData);
+      const response = await axios.post('https://sg2mycab.onrender.com/api/contactform/booking/form', formData);
       console.log('Email sent:', response.data);
     } catch (error) {
       console.error('Error sending email:', error);

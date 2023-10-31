@@ -20,7 +20,7 @@ const Contact = () => {
         console.log(formData);
         
         try {
-            const response = await fetch('hhttps://sg2mycabsing.onrender.com/api/contactform/send', {
+            const response = await fetch('https://sg2mycab.onrender.com/api/contactform/send', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
