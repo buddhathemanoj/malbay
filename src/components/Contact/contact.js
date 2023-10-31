@@ -4,7 +4,7 @@ import Contactpic from '../../asset/contact_page_banner_img.jpg';
 import './contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone,faEnvelope } from '@fortawesome/free-solid-svg-icons';
-
+import { Modal, Button } from "antd";
 const Contact = () => {
 
     const [formData, setFormData] = useState({
@@ -13,20 +13,35 @@ const Contact = () => {
         subject: '',
         message: ''
     });
-
+    const [submissionStatus, setSubmissionStatus] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const handleSubmit = async (event) => {
         event.preventDefault();
         console.log(formData);
         
-        await fetch('http://localhost:3002/api/contactform/send', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        });
+        try {
+            const response = await fetch('http://localhost:3002/api/contactform/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+            console.log('handleSubmit called');
+            const result = await response.json();
+            console.log('Server response:', result);
+            
+            setSubmissionStatus(result.success);
+            setIsModalOpen(true);
+        } catch (error) {
+            console.error('Error:', error);
+        }
     };
-
+    
+    
+    const handleModalClose = () => {
+        setIsModalOpen(false);  // Function to close the modal
+    };
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prevData => ({
@@ -38,6 +53,18 @@ const Contact = () => {
 
     return (
         <div className="contact-container">
+              <Modal 
+                title="Submission Status" 
+                visible={isModalOpen} 
+                onCancel={handleModalClose} 
+                footer={[
+                    <Button key="ok" type="primary" onClick={handleModalClose}>
+                        OK
+                    </Button>
+                ]}
+            >
+                {submissionStatus === true ? 'Email has been sent successfully!' : 'Email sending failed. Please try again.'}
+            </Modal>
             <div className="contact-header">
                 <div className="background-image">
                     <img src={Contactpic} alt="Contact Background" />

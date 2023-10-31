@@ -20,7 +20,7 @@ const Pricing = () => {
             setOpenCollapsible(index); // Open the clicked collapsible
         }
     };
- 
+
     // const {_id} = pricingArr
     // const handleBookNowClick = () => {
     //     navigate(`/booking/${_id}`);
@@ -29,7 +29,7 @@ const Pricing = () => {
 
     useEffect(() => {
         axios
-            .get('https://sg2mycabsing.onrender.com/api/packages/getallpackages')
+            .get('http://localhost:3002/api/packages/getallpackages')
             .then((response) => {
                 setPricingArr(response.data);
                 setLoader(!isLoader)
@@ -52,7 +52,7 @@ const Pricing = () => {
             </div>
             {isLoader ? <div className='loader-container'>
                 <BallTriangle type="ThreeDots" color="#C70039" height={50} width={50} />
-            </div> :   <ul className="pricing-list-container">
+            </div> : <ul className="pricing-list-container">
                 {pricingArr.map((pricingData, index) => (
                     <li key={pricingData._id} className="collapse-list-item">
                         <div className='collapsible-button-container'>
@@ -70,14 +70,25 @@ const Pricing = () => {
                                             </li>
                                         ))}
                                     </ul>
-                                <Link to={`/booking/${pricingData._id}`}><button className='clasicbookkbtn' >Book Now</button></Link>    
+                                    <div style={{ textAlign: 'center' }}>
+    <Link to={`/booking/${pricingData._id}`}>
+        <div class="box-1">
+          <div class="btn btn-one">
+            <span>Book Now</span>
+          </div>
+        </div>
+    </Link>
+</div>
+
+
                                 </div>
+
                             </div>
                         )}
                     </li>
                 ))}
             </ul>}
-          
+
         </div>
     );
 };
