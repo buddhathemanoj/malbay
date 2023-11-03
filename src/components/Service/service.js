@@ -2,10 +2,10 @@ import { FaUserAlt,FaMedal,FaCalendarCheck } from "react-icons/fa";
 import { AiFillCar } from "react-icons/ai";
 import { FaCarRear } from "react-icons/fa6";
 import "./service.css"
-import car from "../../asset/Airport-Transfer.jpg"
-import car1 from "../../asset/Private-Aviation.jpg"
-import car2 from "../../asset/Hourly-Charter.jpg"
-import car3 from "../../asset/Long-DistanceTrip.jpg"
+import car from "../airporttransfer.jpg"
+import car1 from "../../../src/asset/privateaviation.jpg"
+import car2 from "../../../src/asset/hourlycharter.jpg"
+import car3 from "../../../src/asset/discovertheextraordinary.jpg"
 import { Link ,useNavigate} from "react-router-dom";
 
 
@@ -43,7 +43,7 @@ const Service = () => {
         <div className="airport-bg-container">
             <div className="airport-transfer-container">
                   <h1>Airport Transfers Made Easy</h1>
-                  <p>Celebrate Your Travels with Confidence and Convenience through Sg2Mycab Express transport solutions. Our 24/7 dedicated operations department ensures a seamless experience for business and leisure travelers alike, accommodating groups of any size. Opt for Sg2Mycab to guarantee a luxurious and secure journey to the airport, promising both style and serenity for your travels.
+                  <p>Discover Superior Service and Support with Sg2Mycab Express Transport Solutions. Our 24/7 operations team ensures a seamless experience for travelers of all types and group sizes. Choose Sg2Mycab for a stylish and secure journey to the airport, redefining your travel experience.
                     </p>
                 <button className="btn btn-info learn-more-btn" onClick={handleLearnmore}>Learn more</button>
             </div>
@@ -53,14 +53,14 @@ const Service = () => {
             <img src={car1} alt="cars" style={{borderRadius:"10px"}} className="car-img"/>
             <div className="private-transfer-container">
                   <h1>Premium Ground Transportation for Private Aviation</h1>
-                  <p>Celebrate Unmatched Ground Transportation with Sg2Mycab Express tansport solutions. Our global presence spans private airfields, where every client receives a dedicated private aviation specialist. Opt for Sg2Mycab Express to enjoy effortless access to private airports and FBOs, all enhanced by our premium car service.</p>
+                  <p>Choose Sg2Mycab Express for premium ground transportation that enhances your private aviation experience. With dedicated private aviation specialists, we ensure seamless access to private airports and FBOs, prioritizing your comfort and safety. Elevate your journey with our unmatched service and support, setting us apart for a worry-free and luxurious travel experience.</p>
                     <button className="btn btn-info" onClick={handleLearnmore}>Learn more</button>
             </div>
         </div>
         <div className="airport-bg-container">
             <div className="airport-transfer-container">
-                  <h1>Hourly Charters to Fit Your Lifestyle</h1>
-                  <p>Experience unparalleled flexibility with Sg2Mycab's hourly services, perfect for any travel adventure, whether it's a short excursion or an extended voyage. Our chauffeur is at your service for as long as you need, without requiring specific destination information. Simply share your pick-up details, and during your journey, customize your travel stops according to your preferences. Your travel, your schedule, your way - that's the Sg2Mycab's promise.</p>
+                  <h1>Tailored Hourly Charters for Your Convenience</h1>
+                  <p>Enjoy Unmatched Flexibility with Sg2Mycab's Hourly Services. Unlike local tours, our chauffeur-driven approach lets you customize your journey, whether it's a short outing or a longer adventure. Just share your pick-up details and tailor your stops along the way to suit your preferences. Your travel, your way – that's Sg2Mycab's commitment, providing top-tier service and support that stands out from local tours.</p>
                      <button className="btn btn-info" onClick={handleLearnmore}>Learn more</button>
             </div>
             <img src={car2} alt="cars" style={{borderRadius:"10px"}} className="car-img" />
@@ -69,8 +69,8 @@ const Service = () => {
         <div className="extended-bg-container">
         <img src={car3} alt="cars" style={{borderRadius:"10px"}} className="car-img" />
             <div className="private-transfer-container">
-                  <h1>Journeys Beyond the Ordinary</h1>
-                  <p>Discover the epitome of luxury in long-distance travel with Sg2Mycab, connecting Singapore to neighboring cities and regions. Whether your journey is for business or leisure, immerse yourself in a world of elegance aboard our premium vehicles, where a dedicated chauffeur ensures a smooth, worry-free experience. Every mile transforms into a private retreat, granting you the freedom to savor your travel in absolute comfort and style.</p>
+                  <h1>Discover the Extraordinary</h1>
+                  <p>Discover Unrivaled Long-Distance Luxury with Sg2Mycab. Unlike local tours, our premium vehicles and dedicated chauffeurs provide a superior travel experience, whether for business or leisure. Each mile is a private sanctuary, offering unparalleled comfort and style. Choose Sg2Mycab for a travel experience that sets a new standard for luxury and service.</p>
                      <button className="btn btn-info" onClick={handleLearnmore}>Learn more</button>
             </div>
           

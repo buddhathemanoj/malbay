@@ -3,7 +3,7 @@
     min-height: 100vh
 }
 .pricing-top-bg-container {
-    background-image: url("https://res.cloudinary.com/dorh4kb0v/image/upload/v1697706364/Car-Mileage-Schedule-scaled_atbbru.jpg");
+    background-image: url("../../asset/pricingbg.jpg");
     background-size: cover;
     height: 55vh;
     display: flex;
