@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import citypic from '../city.jpeg'
-import driverpic from '../driver.png'
+import citypic from '../../asset/malaysiacity.jpg'
+import driverpic from '../../asset/driver.jpg'
 import car1 from '../alphard-blue.png'
 import car2 from '../alphard-white.png'
 import "./home.css"
@@ -70,13 +70,13 @@ Hyundai Starex : SGD 130
   return (
     <div className="home">
       <div className="homequote">
-        <h1 className="animated-heading">TRANSFORMING YOUR COMMUTE EXPERIENCE <br /> CONNECTING PEOPLE AND PLACES</h1></div>
+        <h1 className="animated-heading">SETTING A NEW STANDARD <br /> UNMATCHED EXCELLENCE IN LOCAL TOUR SERVICES</h1></div>
 
       <div className="bgpic" style={{ backgroundImage: `url(${citypic})` }}>
       </div>
       <div className="homecontparas">
         <h2 className="Headinghome">Sg2Mycab's TRANSPORT SOLUTIONS</h2><br />
-        <p className="padding20px fontpara parahome">At Sg2Mycab Transport Solutions, we specialize in the safe and efficient transportation of people from singapore to malaysia. As a dedicated transport company, we understand the importance of reliable and comfortable transportation for individuals. Whether you need a convenient airport transfer, a dependable shuttle service, or private transportation for events, our experienced drivers are here to ensure you reach your destination with ease. Our commitment to safety, punctuality, and exceptional customer service sets us apart. We take pride in offering a range of vehicles to accommodate your specific needs, and our drivers are trained to provide a pleasant and secure journey. Trust us to be your partner in personal transportation, and experience the convenience and peace of mind that Sg2Mycab's  Express Transport Solutions brings to every ride."</p>
+        <p className="padding20px fontpara parahome">Choose us for unmatched service and customer support in the local tour industry. We're committed to providing the best experience, ensuring your satisfaction every step of the way.When it comes to local tours, we stand out by providing the finest service and dedicated customer support. Your satisfaction is our top priority.Experience local tours like never before. Our commitment to excellence and exceptional customer service make us the clear choice for your travel needs.</p>
 
         <button onClick={toggleForm} className="know-more-btn"> {isFormOpen ? "Close" : "Get Info"}</button>
         <br />
@@ -187,7 +187,7 @@ Hyundai Starex : SGD 130
         <div className="fleet-container">
 
           <div className="fleet-text">
-            <h2>Seamless Transport Solutions<br />Connecting Singapore and Malaysia</h2>
+            <h2>Superior Transport Solutions <br /> Linking Singapore and Malaysia</h2>
             <p>Our extensive fleet of modern vehicles, a team of skilled professionals, and a commitment to punctuality ensure that your journey with us is smooth, secure, and stress-free. Whether you're a business looking to optimize your supply chain, a traveler seeking convenience, or anyone in between, we're here to cater to your unique transport needs.</p>
           </div>
 
@@ -223,7 +223,7 @@ Hyundai Starex : SGD 130
           <h1>OUR FLEET</h1>
           <div className="line"></div>
         </div>
-        <p>At Sg2Mycab's  Express, we are unwavering in our commitment to safety, maintenance, and aesthetic excellence. Our versatile fleet exclusively features the latest luxury sedan, SUV, minibus, and coach models. Discover our carefully curated collection, thoughtfully designed to cater to your unique preferences."</p>
+        <p>At Sg2Mycab's Express, we're committed to providing the best service in the local tour industry, emphasizing safety, maintenance, and aesthetic excellence. Our fleet exclusively showcases the latest luxury sedan, SUV, minibus, and coach models, assuring unmatched quality to exceed your expectations.</p>
         <Slider {...settings}>
           <div>
             <img className="carosal" src={car1} alt="Blue Alphard" />

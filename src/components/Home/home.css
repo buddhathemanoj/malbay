@@ -2,6 +2,8 @@
     /* height: '80vh width: '100%',marginTop:'-100px' */
     height:90vh;
     width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
     /* margin-top: -100px; */
 }
 .homequote{

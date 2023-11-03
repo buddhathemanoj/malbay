@@ -12,7 +12,7 @@
     border: 5px solid #FFF;
 }
 .destination-heading-container {
-    background-image: url("https://assets-global.website-files.com/620d42e86cb8ec4d0839e59d/6230e9244963aa3b684c5ed2_61cb6723e4c8112dbd440616_Location-Based-Services-Example.jpeg");
+    background-image: url("../../asset/destinations.jpg");
     background-size: cover;
     height: 40vh;
     display: flex;

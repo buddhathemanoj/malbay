@@ -1,8 +1,8 @@
 import "./location.css"
 import sekinchan from "../../asset/sekinchan.jpg"
-import mersing from "../../asset/mersing-1654740355.jpg"
-import lumbur from "../../asset/kuala-lumpur-1654740535.jpg"
-import highlands from "../../asset/cameron-highland-1654740575.jpg"
+import mersing from "../../asset/mersing.jpg"
+import lumbur from "../../asset/kualalumpur.jpg"
+import highlands from "../../asset/cameronhighlands.jpg"
 import { Link ,useNavigate} from "react-router-dom"
 const Location = () => {
 

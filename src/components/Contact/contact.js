@@ -1,6 +1,6 @@
 // Contact.js
 import React ,{useState}from "react";
-import Contactpic from '../../asset/contact_page_banner_img.jpg';
+import Contactpic from '../../asset/contactbmg.jpg';
 import './contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone,faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -74,19 +74,17 @@ const Contact = () => {
                 </div>
             </div>
             <div className="contactparas">
-            <h1>Get in Touch with Malbay's Professional Car Service</h1>
+            <h1>Get in Touch with Sg2Mycab's Professional Car Service</h1>
             <h3>
-                Malbay is unwavering in its commitment to delivering world-class, on-time global 
-                chauffeured ground transportation services. Our chauffeur service is designed to surpass
-                 your expectations, setting the benchmark for excellence and quality.
+            Sg2Mycab is steadfast in its commitment to delivering world-class global chauffeured ground transportation services that outshine other local tours. Our chauffeur service is a testament to our unwavering pursuit of excellence, ensuring punctuality, support, and a level of service that sets the highest industry standards.
                 </h3>
 
             </div>
             <div className="contact-details">
                 <div className="contact-info">
                 <h1>Your Requests, Our Mission</h1>
-                    <h3>Reach Out to Malbay Express Car Services</h3><br/>
-                    <h2><FontAwesomeIcon icon={faPhone} /><span style={{color:'#333333',fontSize:'20px',marginLeft:'10px'}}>+++123456789</span> </h2>
+                    <h3>Reach Out to Sg2Mycab Express Car Services</h3><br/>
+                    <h2><FontAwesomeIcon icon={faPhone} /><span style={{color:'#333333',fontSize:'20px',marginLeft:'10px'}}>+6582335292</span> </h2>
                     <h2> <FontAwesomeIcon icon={faEnvelope} /> <span style={{color:'#333333',fontSize:'20px',marginLeft:'10px'}}>info@email.com</span></h2>
                 </div>
                 <div className="book-car-service">
