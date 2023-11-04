@@ -28,7 +28,7 @@ const Footer = () => {
                     <div className="col-12 col-md-4 mb-3 contact-footer-container">
                         <p><FontAwesomeIcon icon={faPhone} className="me-2" />+6582335292</p>
                         <p><FontAwesomeIcon icon={faMapMarkerAlt} className="me-2" />316C Anchorvale Link 05 - 209 <br/>Anchorvale Gardens<br/>Singapore<br/>543316</p>
-                        <p><FontAwesomeIcon icon={faEnvelope} className="me-2" />flynewtours@gmail.com</p>
+                        <p><FontAwesomeIcon icon={faEnvelope} className="me-2" />sg2mycab@gmail.com</p>
                     </div>
                 </div>
             </div>

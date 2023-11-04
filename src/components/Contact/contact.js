@@ -85,7 +85,7 @@ const Contact = () => {
                 <h1>Your Requests, Our Mission</h1>
                     <h3>Reach Out to Sg2Mycab Express Car Services</h3><br/>
                     <h2><FontAwesomeIcon icon={faPhone} /><span style={{color:'#333333',fontSize:'20px',marginLeft:'10px'}}>+6582335292</span> </h2>
-                    <h2> <FontAwesomeIcon icon={faEnvelope} /> <span style={{color:'#333333',fontSize:'20px',marginLeft:'10px'}}>info@email.com</span></h2>
+                    <h2> <FontAwesomeIcon icon={faEnvelope} /> <span style={{color:'#333333',fontSize:'20px',marginLeft:'10px'}}>sg2mycab@email.com</span></h2>
                 </div>
                 <div className="book-car-service">
                 <h3>Book your car service</h3>

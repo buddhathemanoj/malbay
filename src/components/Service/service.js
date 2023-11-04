@@ -54,14 +54,14 @@ const Service = () => {
             <div className="private-transfer-container">
                   <h1>Premium Ground Transportation for Private Aviation</h1>
                   <p>Choose Sg2Mycab Express for premium ground transportation that enhances your private aviation experience. With dedicated private aviation specialists, we ensure seamless access to private airports and FBOs, prioritizing your comfort and safety. Elevate your journey with our unmatched service and support, setting us apart for a worry-free and luxurious travel experience.</p>
-                    <button className="btn btn-info" onClick={handleLearnmore}>Learn more</button>
+                    <button className="btn btn-info learn-more-btn" onClick={handleLearnmore}>Learn more</button>
             </div>
         </div>
         <div className="airport-bg-container">
             <div className="airport-transfer-container">
                   <h1>Tailored Hourly Charters for Your Convenience</h1>
                   <p>Enjoy Unmatched Flexibility with Sg2Mycab's Hourly Services. Unlike local tours, our chauffeur-driven approach lets you customize your journey, whether it's a short outing or a longer adventure. Just share your pick-up details and tailor your stops along the way to suit your preferences. Your travel, your way – that's Sg2Mycab's commitment, providing top-tier service and support that stands out from local tours.</p>
-                     <button className="btn btn-info" onClick={handleLearnmore}>Learn more</button>
+                     <button className="btn btn-info learn-more-btn" onClick={handleLearnmore}>Learn more</button>
             </div>
             <img src={car2} alt="cars" style={{borderRadius:"10px"}} className="car-img" />
         </div>
@@ -71,7 +71,7 @@ const Service = () => {
             <div className="private-transfer-container">
                   <h1>Discover the Extraordinary</h1>
                   <p>Discover Unrivaled Long-Distance Luxury with Sg2Mycab. Unlike local tours, our premium vehicles and dedicated chauffeurs provide a superior travel experience, whether for business or leisure. Each mile is a private sanctuary, offering unparalleled comfort and style. Choose Sg2Mycab for a travel experience that sets a new standard for luxury and service.</p>
-                     <button className="btn btn-info" onClick={handleLearnmore}>Learn more</button>
+                     <button className="btn btn-info learn-more-btn" onClick={handleLearnmore}>Learn more</button>
             </div>
           
         </div>

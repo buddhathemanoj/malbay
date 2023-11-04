@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Collapse } from 'antd';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { BallTriangle } from 'react-loader-spinner';
 import { ImLocation2 } from "react-icons/im";
 import "./destination.css"
@@ -65,8 +66,15 @@ const Destination = () => {
                                             </li>
                                         ))}
                                     </ul>
-                                    <button className='clasicbookkbtn' onClick={handleBookNowClick}>Book Now</button>
-                                </div>
+                                    <div style={{ textAlign: 'center' }}>
+                                        <Link to={`/booking/${pricingData._id}`} className='pricing-link-btn'>
+                                            <div class="box-1">
+                                                <div class="btn btn-one">
+                                                    <span>Book Now</span>
+                                                </div>
+                                            </div>
+                                        </Link>
+                                    </div>                                </div>
                             </div>
                         )}
                     </li>

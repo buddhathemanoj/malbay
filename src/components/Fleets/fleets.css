@@ -125,7 +125,7 @@
     }
     .car-details-list-container {
         flex-direction: row;
-        gap: 30px;
+        gap: 10px;
         padding-left: 0px;
         flex-wrap: wrap;
     }

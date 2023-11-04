@@ -50,7 +50,7 @@
     font-family: "Open Sans",Sans-serif;
 }
 .homecontparas{
-    padding: 80px;
+    padding: 30px 80px 10px 80px ;
 }
 .marginbtn{
     margin-left: 45%;
@@ -184,12 +184,14 @@
       
         padding: 15px;
        
+        
     }
     .Headinghome{
         padding: 0px;
-        padding-left: 30px;
-       margin-top: -20px;
-       padding-right: 20px;
+        padding-left: 5px;
+       margin-top: -10px;
+       padding-right: 5px;
+       font-size: 24px;
     }
     .homequote{
         padding-left: 40px;
@@ -198,7 +200,7 @@
         font-size: 16px;
     }
     .homecontparas{
-        padding: 0 30px 30px 30px;
+        padding: 0 10px 10px 10px;
     }
 
     .marginbtn{
@@ -207,7 +209,7 @@
     }
     .bgpic2 {
         width: 100%; /* or a specific width like 300px */
-        height: 180px; /* adjust based on your needs */
+        height: 110px; /* adjust based on your needs */
         background-size: 120%;
         background-repeat: no-repeat;
         animation: fadeIn 1.5s ease-in-out;
@@ -240,7 +242,7 @@
 
 @media screen and (max-width: 796px) {
     .homecontparas{
-        padding: 0 30px 30px 30px;
+        padding: 0 10px 10px 10px;
     }
 
 }
