@@ -329,7 +329,7 @@ export const Booking = (props) => {
           </div>
           {/* Submit Button */}
           <div className="back-next-btn-container">
-            <button type="button" className="btn btn-primary back-btn" onClick={clickToBack}>
+            <button type="button"style={{marginBottom:'5px'}} className="btn btn-primary back-btn" onClick={clickToBack}>
               Back
             </button>
 
