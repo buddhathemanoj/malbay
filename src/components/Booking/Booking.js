@@ -98,7 +98,7 @@ export const Booking = (props) => {
 
     const locationData = async () => {
       try {
-        const response = await axios.get(`https://sg2mycabsing.onrender.com/api/packages/getpackage/${id}`)
+        const response = await axios.get(`https://sg2mycab.onrender.com/api/packages//getpackage/${id}`)
 
         if (response.status === 200) {
           const locData = response.data
@@ -195,6 +195,7 @@ export const Booking = (props) => {
                 className="form-control"
                 placeholder="Country"
                 onChange={handleInputChange}
+                style={{maxWidth:'100%'}}
               >
                 <option value="" disabled>Select Country</option>
                 {countries.map((country, index) => (
