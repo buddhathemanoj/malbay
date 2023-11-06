@@ -7,6 +7,7 @@ import paynow from '../../asset/paynow2.jpg'
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FaUser, FaChild } from 'react-icons/fa';
+import axios from "axios";
 
 const Payment = () => {
   const location = useLocation();
@@ -43,6 +44,16 @@ useEffect(() => {
 const clickToCancel = () => {
   window.history.back()
 }
+
+const clickToConfirm = async (formData) => {
+  console.log("the function run");
+  try {
+    const response = await axios.post('https://sg2mycab.onrender.com/api/contactform/booking/form', formData);
+    console.log('Email sent:', response.data);
+  } catch (error) {
+    console.error('Error sending email:', error);
+  }
+};
 // Log values to console
 console.log('GST Amount:', gst);
 console.log('Total Price:', totalPrice);
@@ -50,10 +61,10 @@ console.log('Total Price:', totalPrice);
 
     return (
       <div >
-          <div   className="payment-bg-container">
+          <div  className="payment-bg-container">
             <div className="detail-image-container">
                 <div className="payment-card-container">
-                    <div style={{display:'flex',justifyContent:'space-between',fontWeight:'bold'}} className="payment-destination"><p>{formData.pickLocation}</p> <p><BiTransferAlt style={{ marginLeft:"20px"}}/></p><p> {formData.dropLocation}</p></div>
+                    <div style={{display:'flex',justifyContent:'space-between',fontWeight:'bold'}} className="payment-destination"><p>{formData.pickLocation}</p> <p><BiTransferAlt style={{ marginLeft:"20px", color:"009900",fontSize:"20"}}/></p><p> {formData.dropLocation}</p></div>
                     <h6 className="payment-location">Car Name  <span className="payment-destination">{formData.carName}</span></h6>
                     <h6 className="payment-location"> Adults   <span className="payment-destination">{formData.adults}</span></h6>
                     <h6 className="payment-location"> Children   <span className="payment-destination">{formData.children}</span></h6>
@@ -62,15 +73,15 @@ console.log('Total Price:', totalPrice);
                     <h6 className="payment-location">GST  <span className="payment-destination"><b>S${gst}</b></span></h6>
                     <hr/>
                     <h6 className="payment-location">Amount  <span className="payment-destination"><b>S${totalPrice}</b></span></h6>
-
-                    <button className="cancel-payment-btn" onClick={clickToCancel}>Cancel Payment</button>
+                     <button className="confirm-booking-btn" type="button" onClick={clickToConfirm}>Confirm Booking</button>
+                    <button type="button" className="cancel-payment-btn" onClick={clickToCancel}>Cancel Payment</button>
                 </div>
-                <div className="payment-image-container">
+                {/* <div className="payment-image-container">
 
                     <p className="invoice-desc">Scan QR code with your<br/> <img style={{width:"18%"}} src={paynow} alt="PayNow"></img> <br/>to proceed with payment</p>
                 <img src={qrCode} alt="qr code" className="qr-code-image" width={200} />
                 <button className="payment-pay-btn">Pay Now</button>
-                </div>
+                </div> */}
             </div>
         </div>
       </div>

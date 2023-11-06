@@ -7,6 +7,9 @@
     background-attachment: fixed; /* Make the background image fixed */
     background-position: center center;
   }
+  .newSty {
+    border: 1px solid red;
+  }
   
   .contact-header {
     position: relative;
@@ -56,7 +59,7 @@
   .contact-details {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding: 0 6%;
     z-index: 2; /* Content is above the background image */
@@ -70,14 +73,22 @@
     color: #000000;
     margin-bottom: 20px;
   }
-  
+  .input-container {
+    margin-bottom: 10px;
+  }
   .contact-info h3 {
     color: #333333 !important;
   }
-  
+  .submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   padding: 0px !important;
+   font-weight: bold;
+  }
   .book-car-service {
     text-align: center;
-    background: rgba(240, 230, 216, 0.705) ;
+    background: rgba(125, 125, 125, 0.705) ;
     border-radius: 10px;
     padding:  1% 5%;
     border: 1px solid rgb(207, 206, 206);

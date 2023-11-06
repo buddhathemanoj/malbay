@@ -42,14 +42,8 @@ export const Booking = (props) => {
     }
   }, [dropLocations]);
   console.log(formData.dropLocation)
-  const sendEmail = async (formData) => {
-    try {
-      const response = await axios.post('https://sg2mycab.onrender.com/api/contactform/booking/form', formData);
-      console.log('Email sent:', response.data);
-    } catch (error) {
-      console.error('Error sending email:', error);
-    }
-  };
+
+ 
   const clickToPayPage = (event) => {
     event.preventDefault();
     console.log(formData);
@@ -71,7 +65,6 @@ export const Booking = (props) => {
     });
 
     window.scrollTo(20, 20);
-    sendEmail(formData);
   }
 
   const handleInputChange = (event) => {

@@ -4,6 +4,7 @@ import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "../Icons";
 import "./navbar.css"
 import logo from '../../asset/Sg2Mycab-logos_black.png'
 import logo1 from '../../asset/logo2.png'
+import logo2 from "../../asset/newLogo.png"
 function Navbar() {
   const [click, setClick] = useState(false);
 
@@ -14,7 +15,7 @@ function Navbar() {
         <div className="nav-container">
           <div className="logo-wrapper">
               <NavLink exact to="/" className="nav-logo">
-           <img className="icon" style={{alignContent:'left'}} src={logo} alt="Sg2Mycab" />
+           <img className="icon" style={{alignContent:'left'}} src={logo2} alt="Sg2Mycab" />
           </NavLink>
           </div>
         

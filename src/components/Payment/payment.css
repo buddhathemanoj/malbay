@@ -7,7 +7,7 @@
   font-family: 'Sans Serif', sans-serif;
     display: flex;
     font-family: 'Roboto';
-    justify-content: space-around;
+    justify-content: center !important;
     align-items: center;
     padding-bottom: 30px;
 }
@@ -19,7 +19,7 @@
 }
 .payment-bg-container {
   margin: 1% 15% 6% 15%;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.324);
+  box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.324);
   /* border: 1px solid rgba(0, 0, 0, 0.663); */
   border-radius: 40px;
     padding-top: 40px;
@@ -42,7 +42,7 @@
     font-size: 15px;
 }
 .payment-pay-btn {
-    background-color: #f1890b;
+    background-color: #ff8c42;
     width: 120px;
     padding: 9px;
     border: none;
@@ -52,12 +52,13 @@
     animation: shadow-blink-pay 3s infinite;
     color: bold;
     border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
     margin-top: 25px;
 }
 
 .payment-pay-btn:hover {
-    background-color: #a85f06;
+    background-color: rgb(189, 109, 11);
 }
 @keyframes shadow-blink-pay {
     0% {
@@ -72,7 +73,7 @@
   }
 
   .payment-card-container {
-    width: 300px;
+    width: 370px;
     padding: 18px;
     background-color: #ffffff;
     height: 100%;
@@ -116,11 +117,30 @@
     cursor: pointer;
     text-decoration: underline;
     color: #000000;
-    margin-top: 40px;
+    background-color: #fff;
+    margin-top: 20px;
+    transition: color 0.3s ease-out;
   }
   .cancel-payment-btn:hover {
     color: #ff0f0f;
-    
+  }
+  .confirm-booking-btn {
+    padding: 9px;
+    border: 1px solid #ff8c42;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: #ff8c42 ;
+    color: #fdfdfd;
+    margin-top: 20px;
+    transition: background-color 0.4s ease-in-out;
+
+  }
+  .confirm-booking-btn:hover {
+    background-color: #f1890b;
+    color: #fff;
+    border: 1px solid #f1890b;
   }
   .invoice-heading {
     font-weight: bold;
