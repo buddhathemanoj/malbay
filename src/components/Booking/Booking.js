@@ -5,7 +5,6 @@ import '../Home/home.css';
 import "./Booking.css"
 
 export const Booking = (props) => {
-  console.log(props)
   const navigate = useNavigate();
   const [countries, setCountries] = useState([]);
   const [dropLocation, setLocation] = useState({})

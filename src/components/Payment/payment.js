@@ -42,26 +42,34 @@ const clickToCancel = () => {
 }
 
 const handleModalClose = () => {
-  setIsModalOpen(false)
-}
+  setIsModalOpen(false);
+  if (submissionStatus) {
+    navigate("/services");
+  }
+};
+
 
 const clickToConfirm = async () => {
   try {
-  
     const response = await fetch('https://sg2mycabserver.onrender.com/api/contactform/booking/form', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
       },
       body: JSON.stringify(formData)
-  });
+    });
 
     const result = await response.json();
-    
-    setSubmissionStatus(result.success);
-    setIsModalOpen(true);
-    navigate("/services")
 
+    if (result.success) {
+      // Set the modal state to true to show it
+      setIsModalOpen(true);
+      setSubmissionStatus(result.success);
+      // Do not navigate here, let the user close the modal first
+    } else {
+      // Handle the case where result.success is not true
+      console.error('Email sent, but success status is false:', result);
+    }
   } catch (error) {
     console.error('Error sending email:', error);
   }
