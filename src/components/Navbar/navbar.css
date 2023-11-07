@@ -68,7 +68,7 @@
 .nav-links {
   color: #101010;
   text-decoration: none;
-
+   padding: 0px !important;
   height: 100%;
   border-bottom: 3px solid transparent;
 }

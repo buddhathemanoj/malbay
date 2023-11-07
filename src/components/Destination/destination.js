@@ -29,7 +29,7 @@ const Destination = () => {
 
     useEffect(() => {
         axios
-            .get('https://sg2mycab.onrender.com/api/packages/getallpackages')
+            .get('https://sg2mycabserver.onrender.com/api/packages/getallpackages')
             .then((response) => {
                 setPricingArr(response.data);
                 setLoader(!isLoader)

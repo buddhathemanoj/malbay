@@ -16,12 +16,12 @@ const Contact = () => {
     });
     const [submissionStatus, setSubmissionStatus] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         console.log(formData);
-
         try {
-            const response = await fetch('http://localhost:4002/api/contactform/send', {
+            const response = await fetch('https://sg2mycabserver.onrender.com/api/contactform/send', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

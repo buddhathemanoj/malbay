@@ -8,7 +8,7 @@ export const Booking = (props) => {
   console.log(props)
   const navigate = useNavigate();
   const [countries, setCountries] = useState([]);
-  const [dropLocations, setLocation] = useState({})
+  const [dropLocation, setLocation] = useState({})
   const [newBooking, setBooking] = useState({});
   const [car, setCars] = useState([]) //car details array
   const [isHovered, setHover] = useState(false)
@@ -26,7 +26,7 @@ export const Booking = (props) => {
     pickupDate: "",
     pickupTime: "",
     pickupLocation: "",
-    dropOffLocation: "",
+    dropLocation: "",
     flightInfo: "",
     numberOfAdults: "",
     numberOfChildren: "",
@@ -37,13 +37,13 @@ export const Booking = (props) => {
 
 
   useEffect(() => {
-    if (dropLocations.location) {  // Check if location is defined to avoid setting undefined
+    if (dropLocation.location) {  // Check if location is defined to avoid setting undefined
       setFormData(prevFormData => ({
         ...prevFormData,
-        dropLocation: dropLocations.location,
+        dropLocation: dropLocation.location,
       }));
     }
-  }, [dropLocations]);
+  }, [dropLocation]);
   console.log(formData.dropLocation)
 
  
@@ -91,7 +91,7 @@ export const Booking = (props) => {
 
     const locationData = async () => {
       try {
-        const response = await axios.get(`https://sg2mycab.onrender.com/api/packages//getpackage/${id}`)
+        const response = await axios.get(`https://sg2mycabserver.onrender.com/api/packages//getpackage/${id}`)
 
         if (response.status === 200) {
           const locData = response.data
@@ -128,7 +128,7 @@ export const Booking = (props) => {
   console.log(checkFill);
 
 
-  const { location } = dropLocations
+  const { location } = dropLocation
 
 
 
@@ -273,7 +273,7 @@ export const Booking = (props) => {
             <div className="col-md-6 mb-3">
               <input
                 type="text"
-                name="dropOffLocation"
+                name="dropLocation"
                 className="form-control"
                 placeholder="Drop Off Location"
                 onChange={handleInputChange}

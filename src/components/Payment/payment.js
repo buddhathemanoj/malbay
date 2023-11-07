@@ -8,6 +8,7 @@ import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FaUser, FaChild } from 'react-icons/fa';
 import axios from "axios";
+import { Modal, Button } from "antd";
 
 const Payment = () => {
   const location = useLocation();
@@ -26,6 +27,9 @@ const Payment = () => {
 //  gstPrice = numericPrice/0.18%
   
 // }
+const [isModalOpen, setIsModalOpen] = useState(false);
+const [submissionStatus, setSubmissionStatus] = useState(null);
+
 const match = selectedCarPrice && selectedCarPrice.match(/\d+/);
 const numericPrice = match ? parseInt(match[0], 10) : 0;
 
@@ -47,24 +51,41 @@ const clickToCancel = () => {
   window.history.back()
 }
 
+const handleModalClose = () => {
+  setIsModalOpen(false)
+}
+
 const clickToConfirm = async () => {
   console.log("the function run");
   console.log("form",formData);
   try {
-    const response = await axios.post('http://localhost:4002/api/contactform/booking/form', formData);
+    const response = await axios.post('https://sg2mycabserver.onrender.com/api/contactform/booking/form', formData);
     console.log('Email sent:', response.data);
+    setIsModalOpen(true);
+    // setSubmissionStatus(response)
   } catch (error) {
     console.error('Error sending email:', error);
   }
 };
-// Log values to console
+
 console.log('GST Amount:', gst);
 console.log('Total Price:', totalPrice);
   console.log(formData.dropLocation)
-
     return (
-      <div >
+      <div>
           <div  className="payment-bg-container">
+          {/* <Modal
+                title="Submission Status"
+                visible={isModalOpen}
+                onCancel={handleModalClose}
+                footer={[
+                    <Button key="ok" type="primary" onClick={handleModalClose}>
+                        OK
+                    </Button>
+                ]}
+            >
+                {submissionStatus === true ? 'Email has been sent successfully!' : 'Email sending failed. Please try again.'}
+            </Modal> */}
             <div className="detail-image-container">
                 <div className="payment-card-container">
                     <div style={{display:'flex',justifyContent:'space-between',fontWeight:'bold'}} className="payment-destination"><p>{formData.pickupLocation}</p> <p><BiTransferAlt style={{ marginLeft:"20px", color:"009900",fontSize:"20"}}/></p><p> {formData.dropLocation}</p></div>
