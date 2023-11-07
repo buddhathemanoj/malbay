@@ -3,6 +3,7 @@ import citypic from '../../asset/malaysiacity.jpg'
 import driverpic from '../../asset/driver.jpg'
 import car1 from '../alphard-blue.png'
 import car2 from '../alphard-white.png'
+import car3 from "../../asset/toyota-innova.png"
 import "./home.css"
 import '../Styles/Accordion.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -224,15 +225,15 @@ Hyundai Starex : SGD 130
           <div className="line"></div>
         </div>
         <p>At Sg2Mycab's Express, we're committed to providing the best service in the local tour industry, emphasizing safety, maintenance, and aesthetic excellence. Our fleet exclusively showcases the latest luxury sedan, SUV, minibus, and coach models, assuring unmatched quality to exceed your expectations.</p>
-        <Slider {...settings}>
+        <Slider {...settings} autoplay autoplaySpeed={3000} speed={900}>
           <div>
             <img className="carosal" src={car1} alt="Blue Alphard" />
           </div>
           <div>
-            <img className="carosal" src={car2} alt="White Alphard" />
+            <img className="carosal" src={car2} alt="White Alphard" width={600} />
           </div>
           <div>
-            <img className="carosal" src={car1} alt="Blue Alphard" />
+            <img className="carosal" src={car3} alt="Blue Alphard" />
           </div>
         </Slider>
       </div>

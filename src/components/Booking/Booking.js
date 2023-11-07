@@ -17,20 +17,23 @@ export const Booking = (props) => {
 
 
   const [formData, setFormData] = useState({
+    tripType: "",
     name: "",
-    country: "",
     email: "",
-    dropLocation: "",
-    flightInfo: "",
-    message: "",
-    adults: "",
-    children: "",
-    number: "",
-    pickLocation: "",
-    pickupTime: "",
-    carName: "",
+    country: "",
+    phoneNumber: "",
+    car: "",
     pickupDate: "",
+    pickupTime: "",
+    pickupLocation: "",
+    dropOffLocation: "",
+    flightInfo: "",
+    numberOfAdults: "",
+    numberOfChildren: "",
+    additionalInfo: ""
   });
+
+  console.log(formData.tripType);
 
 
   useEffect(() => {
@@ -49,13 +52,10 @@ export const Booking = (props) => {
     console.log(formData);
     setBooking(formData);
 
-    // Find the selected car object
     const selectedCar = car.find(eachCar => eachCar.carName === formData.carName);
 
-    // Check if a car was found and if so, extract the price
     const selectedCarPrice = selectedCar ? selectedCar.price : null;
 
-    // Pass the id, formData, and selectedCarPrice to the Payment component via the state prop
     navigate("/payment", {
       state: {
         id,
@@ -124,7 +124,8 @@ export const Booking = (props) => {
     setHover(false)
   }
 
-  const checkFill = formData.children.length
+  const checkFill = formData.numberOfChildren.length 
+  console.log(checkFill);
 
 
   const { location } = dropLocations
@@ -143,6 +144,7 @@ export const Booking = (props) => {
                   type="radio"
                   name="tripType"
                   id="oneWay"
+                  onChange={handleInputChange}
                   value="oneWay"
                   required
                 />
@@ -155,6 +157,7 @@ export const Booking = (props) => {
                   id="twoWay"
                   value="twoWay"
                   required
+                  onChange={handleInputChange}
                 />
                 <label className="form-check-label" htmlFor="twoWay">Two-way</label>
               </div>
@@ -202,7 +205,7 @@ export const Booking = (props) => {
             <div className="col-md-6 mb-3">
               <input
                 type="tel"
-                name="number"
+                name="phoneNumber"
                 className="form-control"
                 placeholder="Phone Number"
                 required
@@ -212,7 +215,7 @@ export const Booking = (props) => {
             {/* Car */}
             <div className="col-md-6 mb-3">
               <select
-                name="carName"
+                name="car"
                 className="form-control"
                 placeholder="Car"
                 onChange={handleInputChange}
@@ -259,7 +262,7 @@ export const Booking = (props) => {
             <div className="col-md-6 mb-3">
               <input
                 type="text"
-                name="pickLocation"
+                name="pickupLocation"
                 className="form-control"
                 placeholder="Pickup Location"
                 required
@@ -270,7 +273,7 @@ export const Booking = (props) => {
             <div className="col-md-6 mb-3">
               <input
                 type="text"
-                name="dropLocation"
+                name="dropOffLocation"
                 className="form-control"
                 placeholder="Drop Off Location"
                 onChange={handleInputChange}
@@ -284,6 +287,7 @@ export const Booking = (props) => {
                 type="text"
                 name="flightInfo"
                 className="form-control"
+                required
                 placeholder="Flight Info"
                 onChange={handleInputChange}
               />
@@ -292,7 +296,7 @@ export const Booking = (props) => {
             <div className="col-md-6 mb-3">
               <input
                 type="number"
-                name="adults"
+                name="numberOfAdults"
                 className="form-control"
                 placeholder="No of Adults"
                 required
@@ -303,7 +307,7 @@ export const Booking = (props) => {
             <div className="col-md-6 mb-3">
               <input
                 type="number"
-                name="children"
+                name="numberOfChildren"
                 className="form-control"
                 placeholder="Number Of Children"
                 onChange={handleInputChange}
@@ -312,7 +316,7 @@ export const Booking = (props) => {
             {/* Additional Info */}
             <div className="col-md-12 mb-3">
               <textarea
-                name="message"
+                name="additionalInfo"
                 className="form-control"
                 rows="1"
                 placeholder="Additional Info Request"
@@ -325,7 +329,6 @@ export const Booking = (props) => {
             <button type="button"style={{marginBottom:'5px'}} className="btn btn-primary back-btn" onClick={clickToBack}>
               Back
             </button>
-
             <button type="submit" className={`btn btn-primary back-btn ${checkFill === 0 ? "no-access-btn" : ""}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
               Next
             </button>
