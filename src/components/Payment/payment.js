@@ -4,6 +4,8 @@ import { BiTransferAlt } from "react-icons/bi";
 import qrCode from "../../asset/WhatsApp_Image_2023-10-25_at_10.58.26_AM-removebg-preview.png"
 import "./payment.css"
 import paynow from '../../asset/paynow2.jpg'
+import { useParams, useNavigate } from "react-router-dom";
+
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FaUser, FaChild } from 'react-icons/fa';
@@ -17,6 +19,7 @@ const Payment = () => {
 
 const [isModalOpen, setIsModalOpen] = useState(false);
 const [submissionStatus, setSubmissionStatus] = useState(null);
+const navigate = useNavigate();
 
 const match = selectedCarPrice && selectedCarPrice.match(/\d+/);
 const numericPrice = match ? parseInt(match[0], 10) : 0;
@@ -52,9 +55,12 @@ const clickToConfirm = async () => {
       },
       body: JSON.stringify(formData)
   });
+
     const result = await response.json();
+    navigate("/services")
     setSubmissionStatus(result.success);
     setIsModalOpen(true);
+
   } catch (error) {
     console.error('Error sending email:', error);
   }
