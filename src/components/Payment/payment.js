@@ -4,7 +4,7 @@ import { BiTransferAlt } from "react-icons/bi";
 import qrCode from "../../asset/WhatsApp_Image_2023-10-25_at_10.58.26_AM-removebg-preview.png"
 import "./payment.css"
 import paynow from '../../asset/paynow2.jpg'
-import { useParams, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
