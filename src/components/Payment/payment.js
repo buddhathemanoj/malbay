@@ -57,9 +57,10 @@ const clickToConfirm = async () => {
   });
 
     const result = await response.json();
-    navigate("/services")
+    
     setSubmissionStatus(result.success);
     setIsModalOpen(true);
+    navigate("/services")
 
   } catch (error) {
     console.error('Error sending email:', error);
