@@ -77,7 +77,7 @@ const clickToConfirm = async () => {
 
 
     return (
-      <div>
+      <div className="payment-main-container">
           <div  className="payment-bg-container">
           <Modal
                 title="Submission Status"

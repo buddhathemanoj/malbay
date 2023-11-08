@@ -8,15 +8,42 @@
 }
 .homequote{
     text-align: left;
-    padding: 20px;
-    padding-left: 70px;
+    padding: 15px;
+    padding-left: 20px !important;
+    padding-bottom: 7px;
+    padding-top: 19px;
 }
+.home-top-book-btn {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    align-items: center;
+
+}
+
 .know-more-link-btn {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
 }
-
+.top-book-now {
+    margin-top: -20px;
+    margin-left: 20px;
+    border-radius: 3px !important;
+    border: none;
+    outline: none;
+    background-color: #39A7FF;
+    padding: 9px;
+    width: 140px;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.7s ease-in-out;
+  }
+  .top-book-now:hover {
+    background-color: #1070be;
+  }
 @keyframes fadeIn {
     from {
       opacity: 0;
@@ -243,6 +270,9 @@
 @media screen and (max-width: 796px) {
     .homecontparas{
         padding: 0 10px 10px 10px;
+    }
+    .home-top-book-btn{
+        padding: 20px 0 ;
     }
 
 }

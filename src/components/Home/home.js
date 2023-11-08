@@ -72,7 +72,9 @@ Hyundai Starex : SGD 130
     <div className="home">
       <div className="homequote">
         <h1 className="animated-heading">SETTING A NEW STANDARD <br /> UNMATCHED EXCELLENCE IN LOCAL TOUR SERVICES</h1></div>
-
+        <div className="home-top-book-btn" >
+        <button className="top-book-now" onClick={handleBooking}>BOOK NOW</button>
+          </div>
       <div className="bgpic" style={{ backgroundImage: `url(${citypic})` }}>
       </div>
       <div className="homecontparas">
@@ -114,7 +116,7 @@ Hyundai Starex : SGD 130
                     <option value="" disabled selected>Select Country</option>
                     <option value="USA">USA</option>
                     <option value="Canada">Canada</option>
-                    {/* ... other countries ... */}
+                 
                   </select>
                 </div>
 

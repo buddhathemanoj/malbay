@@ -1,5 +1,5 @@
 .navbar {
-  height: 80px;
+  height: 55px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,13 +61,15 @@
   text-align: start;
   margin-right: 2rem;
   align-items: center;
+  padding-left: 8px;
+  padding-top: 10px;
   margin-bottom: 0px;
 }
 
 .nav-links {
   color: #101010;
   text-decoration: none;
-
+padding: 10px !important;
   height: 100%;
   border-bottom: 3px solid transparent;
 }
@@ -80,6 +82,8 @@
   line-height: 50px;
   margin-right: 1rem;
   width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
 }
 
 
