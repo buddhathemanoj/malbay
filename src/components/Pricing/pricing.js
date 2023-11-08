@@ -79,10 +79,7 @@ const Pricing = () => {
                                             </div>
                                         </Link>
                                     </div>
-
-
                                 </div>
-
                             </div>
                         )}
                     </li>

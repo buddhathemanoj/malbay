@@ -17,3 +17,9 @@
     background-color: #8aacdf;
     cursor: not-allowed;
 }
+
+@media screen and (max-width:568px) {
+    .back-next-btn-container {
+        display: flex;
+    }
+}
