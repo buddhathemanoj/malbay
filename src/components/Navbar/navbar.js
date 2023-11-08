@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { Link, NavLink, RedirectFunction } from "react-router-dom";
 import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "../Icons";
 import "./navbar.css"
-import logo from '../../asset/Sg2Mycab-logos_black.png'
-import logo1 from '../../asset/logo2.png'
-import logo2 from "../../asset/newLogo.png"
-function Navbar() {
+import logo2 from "../../asset/sG2MYCAB.png"
+
+const Navbar = () => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);

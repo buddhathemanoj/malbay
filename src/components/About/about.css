@@ -1,6 +1,5 @@
 .about-container {
     min-height: 100vh;
-    margin-top: 50px;
 }
 .transport-container {
     display: flex;
@@ -107,14 +106,27 @@
 .half-image { /* Adjust to set the image to half of the container's height */
     position: absolute;
     transform: translateY(-50%);
-    top: 500px;
+    top: 700px;
   }
   .view-service-container {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
+  .about-img-container {
+    background-image: url("../../asset/phone-car-with-map-screen.jpg");
+    background-size: cover;
+    height: 50vh;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.about-us {
+    border: 1px solid #ccc;
+    padding: 5px;
+    background: #ccc3;
+}
   @media (max-width:968px) {
     .half-image {
         display: none;
@@ -164,6 +176,8 @@
         flex-direction: column;
         align-items: flex-start;
         padding-left: 20px;
+        margin-bottom: 0px;
+        padding-bottom: 6px;
     }
     .about-car-img {
         width: 90%;
@@ -180,8 +194,20 @@
       .travel-container {
         padding-left: 20px;
         padding-right: 20px;
+        padding-top: 17px;
       }
       .choose-container {
         width: 90%;
+      }
+      .about-container {
+        margin-top: 0px;
+        padding-top: 0px;
+      }
+      .about-img-container {
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-bottom: 5px;
+        width: 100%;
+        height: 24vh;
       }
   }

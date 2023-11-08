@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import citypic from '../../asset/malaysiacity.jpg'
 import driverpic from '../../asset/driver.jpg'
+import newCity from "../../asset/combined.jpg"
 import car1 from '../alphard-blue.png'
 import car2 from '../alphard-white.png'
 import car3 from "../../asset/toyota-innova.png"
@@ -70,19 +71,22 @@ Hyundai Starex : SGD 130
   };
   return (
     <div className="home">
+      <div className="homequote-book-container">
       <div className="homequote">
-        <h1 className="animated-heading">SETTING A NEW STANDARD <br /> UNMATCHED EXCELLENCE IN LOCAL TOUR SERVICES</h1></div>
+          <h1 className="animated-heading">Seamless Travel from <span className="mention-city-style">Singapore</span> to <span className="mention-city-style2">Malaysia</span> Book <br/> Your Ride Now!</h1></div>
         <div className="home-top-book-btn" >
-        <button className="top-book-now" onClick={handleBooking}>BOOK NOW</button>
-          </div>
-      <div className="bgpic" style={{ backgroundImage: `url(${citypic})` }}>
+          <button className="top-book-now" onClick={handleBooking}>BOOK NOW</button>
+        </div>
+      </div>
+      <div className="bgpic" style={{ backgroundImage: `url(${newCity})` }}>
       </div>
       <div className="homecontparas">
-        <h2 className="Headinghome">Sg2Mycab's TRANSPORT SOLUTIONS</h2><br />
-        <p className="padding20px fontpara parahome">Choose us for unmatched service and customer support in the local tour industry. We're committed to providing the best experience, ensuring your satisfaction every step of the way.When it comes to local tours, we stand out by providing the finest service and dedicated customer support. Your satisfaction is our top priority.Experience local tours like never before. Our commitment to excellence and exceptional customer service make us the clear choice for your travel needs.</p>
-
+        <h2 className="Headinghome">Sg2Mycab's Transport Solutions</h2>
+        <p className="padding20px fontpara parahome">Choose us for unmatched service and customer support in the local tour industry.
+         We're committed to providing the best experience, ensuring your satisfaction every step of the way.When it comes to local tours, we stand out by providing the finest service and dedicated customer support. Your satisfaction is our top  priority.Experience local tours like never before. Our commitment to
+         excellence and exceptional customer service make us the clear choice for your travel needs.</p>
         <button onClick={toggleForm} className="know-more-btn"> {isFormOpen ? "Close" : "Get Info"}</button>
-        <br />
+    
         {isFormOpen && (
           <div className="form-container">
             <h2>Get Your Instant Quote</h2>
@@ -116,7 +120,7 @@ Hyundai Starex : SGD 130
                     <option value="" disabled selected>Select Country</option>
                     <option value="USA">USA</option>
                     <option value="Canada">Canada</option>
-                 
+
                   </select>
                 </div>
 

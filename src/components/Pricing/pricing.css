@@ -134,11 +134,13 @@
         justify-content: center;
     }
     .pricing-top-bg-container {
-      background-image: url("../../asset/pricingbg.jpg");
-      background-size: contain;
+      background-image: url("../../asset/land-vehicle-speeds-through-illuminated-cityscape-dusk-generated-by-ai.jpg");
+      background-size: cover;
       width: 100%;
-      height: 55vh;
-     
+      height: 50vh;
   }
-
+  .pricing-desc {
+   box-shadow: 0 0 1px #dbdbdb;
+   background-color: rgba(123, 123, 123, 0.2);
+  }
 }

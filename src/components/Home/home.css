@@ -1,24 +1,26 @@
-.bgpic{
+.bgpic {
     /* height: '80vh width: '100%',marginTop:'-100px' */
-    height:90vh;
+    height: 50vh;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     /* margin-top: -100px; */
 }
-.homequote{
+
+.homequote {
     text-align: left;
     padding: 15px;
     padding-left: 20px !important;
     padding-bottom: 7px;
     padding-top: 19px;
 }
+
 .home-top-book-btn {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 15px;
     margin-top: 10px;
-    align-items: center;
+    align-items: center;
 
 }
 
@@ -27,8 +29,9 @@
     color: #fff;
     font-weight: bold;
 }
+
 .top-book-now {
-    margin-top: -20px;
+    
     margin-left: 20px;
     border-radius: 3px !important;
     border: none;
@@ -40,96 +43,140 @@
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: background-color 0.7s ease-in-out;
-  }
-  .top-book-now:hover {
+}
+
+.top-book-now:hover {
     background-color: #1070be;
-  }
+}
+
 @keyframes fadeIn {
     from {
-      opacity: 0;
+        opacity: 0;
     }
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  /* Apply the animation to the animated-heading element */
-  .animated-heading {
-    opacity: 0; /* Start with 0 opacity (invisible) */
-    animation: fadeIn 2s ease forwards; /* Apply the fadeIn animation with a 1-second duration */
-  }
-.Headinghome{
+}
+
+/* Apply the animation to the animated-heading element */
+.animated-heading {
+    opacity: 0;
+    /* Start with 0 opacity (invisible) */
+    animation: fadeIn 2s ease forwards;
+    /* Apply the fadeIn animation with a 1-second duration */
+    font-family: "Bebas Neue";
+
+}
+
+.Headinghome {
     text-align: center;
-    font-family: Oswald,Sans-serif;
-    color: #dbb343;
+    text-shadow: 0 0 2px #ffffff;
+    font-family: "Oswald", Sans-serif;
+    color: #FF2E63;
     font-weight: 600;
     line-height: normal;
-  font-size: 32px;
+    margin-bottom: 20px;
+    font-size: 32px;
 }
-.home{
+
+.home {
     margin: 0;
     position: relative;
-    
 }
-.parahome{
-    text-align: center;
-    color: #222;
-    font-family: "Open Sans",Sans-serif;
+
+.mention-city-style {
+    color: #CE5A67;
+    font-weight: bold;
 }
-.homecontparas{
-    padding: 30px 80px 10px 80px ;
+
+.mention-city-style2 {
+    color: #A7D397;
+    font-weight: bold;
 }
-.marginbtn{
+
+.parahome {
+    text-align: start;
+    color: #1c1c1c;
+    font-family: "Open Sans", Sans-serif;
+}
+
+.homecontparas {
+    padding: 30px 80px 10px 80px;
+}
+
+.padding20px {
+      padding-left: 5px;
+      padding-right: 5px;
+}
+
+.marginbtn {
     margin-left: 45%;
     margin-top: 10px;
 
 }
+
 .bgpic2 {
-    width: 100%; /* or a specific width like 300px */
-    height: 300px; /* adjust based on your needs */
+    width: 100%;
+    /* or a specific width like 300px */
+    height: 300px;
+    /* adjust based on your needs */
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 @keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .Headinghome {
     animation: fadeIn 1.8s ease-in-out;
 }
-.radio-group{
+
+.radio-group {
     display: flex;
     gap: 20px;
 }
-.form-container{
+
+.form-container {
     background-color: rgba(14, 13, 13, 0.918);
-   color: white;
-   padding: 30px;
-   border-radius: 10px;
-   margin-top: 15px;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 15px;
 }
-.inputs{
+
+.inputs {
     width: 350px;
     height: 25px;
     border-radius: 5px;
     border: 1px solid #e7e7e7;
 }
-.Trip{
+
+.Trip {
     display: flex;
     align-items: center;
     gap: 80px;
     font-size: 14px;
 }
-.formdispaly{
+
+.formdispaly {
     display: flex;
     align-items: center;
 }
-.triplabel{
+
+.triplabel {
     font-size: 14px;
     font-weight: 600;
 }
-.additionalinfo{
+
+.additionalinfo {
     width: 600px;
 }
 
@@ -138,39 +185,43 @@
     padding: 20px;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  .fleet-text {
+}
+
+.fleet-text {
     flex: 1;
     margin-right: 20px;
-  }
-  
-  .fleet-images {
+}
+
+.fleet-images {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .car-left {
-    transform: scaleX(-1); /* This will flip the car image to face left */
+}
+
+.car-left {
+    transform: scaleX(-1);
+    /* This will flip the car image to face left */
     max-width: 45%;
-  }
-  
-  .car-right {
+}
+
+.car-right {
     max-width: 45%;
-  }
-  .fleet-outer{
+}
+
+.fleet-outer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
-  .clasicbtn{
+}
+
+.clasicbtn {
     margin-top: -20px;
     margin-left: 20px;
-  }
-  .content-wrapper {
+}
+
+.content-wrapper {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .h1-wrapper {
@@ -185,94 +236,159 @@
     background-color: #665b5b;
     margin: 0 10px;
 }
+
 .carosal {
-    max-width: 40%; /* ensures image doesn't overflow its container */
-    display: block;  /* makes image a block-level element */
-    margin: 0 auto;  /* centers image horizontally */
+    max-width: 40%;
+    /* ensures image doesn't overflow its container */
+    display: block;
+    /* makes image a block-level element */
+    margin: 0 auto;
+    /* centers image horizontally */
 }
 
-.Slider > div {
-    display: flex;          /* enable flexbox */
-    justify-content: center;/* center content horizontally */
-    align-items: center;    /* center content vertically */
-    height: 300px;   
-    margin-top: 40px;       /* or whatever height you desire */
+.Slider>div {
+    display: flex;
+    /* enable flexbox */
+    justify-content: center;
+    /* center content horizontally */
+    align-items: center;
+    /* center content vertically */
+    height: 300px;
+    margin-top: 40px;
+    /* or whatever height you desire */
+}
+.know-more-btn {
+    margin-bottom: 7px !important;
 }
 
+.homequote-book-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-right: 70px;
+}
+.accord-wrapper {
+    padding: 10px !important;
+}
 @media screen and (max-width: 960px) {
     .bgpic {
-        height: 38vh;
+        height: 23vh;
         width: 100%;
         background-size: contain;
         background-repeat: no-repeat;
         /* margin-top: -100px; */
     }
-    .form-container{
-      
+
+    .form-container {
+
         padding: 15px;
-       
-        
+
+
     }
-    .Headinghome{
+
+    .Headinghome {
         padding: 0px;
         padding-left: 5px;
-       margin-top: -10px;
-       padding-right: 5px;
-       font-size: 24px;
+        margin-top: -10px;
+        padding-right: 5px;
+        font-size: 24px;
     }
-    .homequote{
+
+    .homequote {
         padding-left: 40px;
     }
-    .parahome{
+
+    .parahome {
         font-size: 16px;
     }
-    .homecontparas{
+
+    .homecontparas {
         padding: 0 10px 10px 10px;
     }
 
-    .marginbtn{
+    .marginbtn {
         align-items: center !important;
 
     }
+
     .bgpic2 {
-        width: 100%; /* or a specific width like 300px */
-        height: 110px; /* adjust based on your needs */
+        width: 100%;
+        /* or a specific width like 300px */
+        height: 110px;
+        /* adjust based on your needs */
         background-size: 120%;
         background-repeat: no-repeat;
         animation: fadeIn 1.5s ease-in-out;
     }
+
     .fleet-container {
         flex-direction: column;
-      }
-      .fleet-text {
+    }
+
+    .fleet-text {
         margin-right: 0;
         margin-bottom: 20px;
-      }
-      .fleet-images {
+    }
+
+    .fleet-images {
         display: flex;
         flex-direction: row;
         align-items: center;
-      }
-      .fleet-outer {
-        align-items: center; /* This will center the button for mobile view */
     }
-    .clasicbtn{
+
+    .fleet-outer {
+        align-items: center;
+        /* This will center the button for mobile view */
+    }
+
+    .clasicbtn {
         margin-top: 0px;
         margin-left: 0px;
-      }
-      .carosal {
-        max-width: 60%; /* ensures image doesn't overflow its container */
-        display: block;  /* makes image a block-level element */
-        margin: 0 auto;  /* centers image horizontally */
+    }
+
+    .carosal {
+        max-width: 60%;
+        /* ensures image doesn't overflow its container */
+        display: block;
+        /* makes image a block-level element */
+        margin: 0 auto;
+        /* centers image horizontally */
     }
 }
 
 @media screen and (max-width: 796px) {
-    .homecontparas{
+    .homecontparas {
         padding: 0 10px 10px 10px;
     }
-    .home-top-book-btn{
-        padding: 20px 0 ;
+
+    .home-top-book-btn {
+        padding: 20px 0;
     }
 
+    .homequote-book-container {
+        display: block;
+        padding: 0px;
+    }
+
+    .animated-heading {
+        font-size: 26px;
+    }
+    .mention-city-style {
+        font-size: 28px;
+    }
+    .mention-city-style2 {
+        font-size: 28px;
+    }
+    .home-top-book-btn {
+        margin-bottom: 5px;
+        padding-top: 8px;
+        padding-bottom: 16px;
+    }
+    .top-book-now {
+        margin-top: -20px;
+    }
+    .accord-wrapper {
+        margin-top: 15px;
+    }
 }

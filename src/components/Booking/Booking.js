@@ -48,8 +48,7 @@ export const Booking = (props) => {
     event.preventDefault();
     setBooking(formData);
 
-    const selectedCar = car.find(eachCar => eachCar.carName === formData.carName);
-
+    const selectedCar = car.find(eachCar => eachCar.carName === formData.car);
     const selectedCarPrice = selectedCar ? selectedCar.price : null;
 
     navigate("/payment", {
@@ -87,12 +86,13 @@ export const Booking = (props) => {
 
     const locationData = async () => {
       try {
-        const response = await axios.get(`https://sg2mycabserver.onrender.com/api/packages//getpackage/${id}`)
+        const response = await axios.get(`https://sg2mycabserver.onrender.com/api/packages/getpackage/${id}`)
 
         if (response.status === 200) {
           const locData = response.data
           setLocation(locData)
           setCars(response.data.cars)
+          // console.log(response.data.cars[0].price);
         }
         else {
           console.error("Failed to fetch data from the API")
@@ -118,7 +118,7 @@ export const Booking = (props) => {
     setHover(false)
   }
 
-  const checkFill = formData.numberOfChildren.length 
+  const checkFill = formData.numberOfChildren.length && formData.numberOfAdults.length && formData.email.length && formData.country.length
 
 
   const { location } = dropLocation

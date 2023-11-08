@@ -24,6 +24,9 @@ const handleServices=()=>{
 }
     return(
         <div className="about-container">
+            <div className="about-img-container">
+               <h1 style={{color:"#fff",fontWeight:"bold",textShadow:"0 0 2px #000"}} className="about-us">About Us</h1>
+            </div>
         <div className="transport-container">
             <div className='welcome-container'>
                 <h1 className="welcome-heading">Discover Sg2Mycab: Your Trusted Partner in Seamless Travel</h1>

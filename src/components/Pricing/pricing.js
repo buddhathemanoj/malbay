@@ -21,6 +21,8 @@ const Pricing = () => {
         }
     };
 
+    // console.log(pricingArr[0]._id);
+
     // const {_id} = pricingArr
     // const handleBookNowClick = () => {
     //     navigate(`/booking/${_id}`);
@@ -44,8 +46,8 @@ const Pricing = () => {
             <div className="pricing-top-bg-container">
                 <h1 className="pricing-heading">UNBEATABLE AFFORDABILITY</h1>
                 <h4 className="pricing-desc">
-          Departing at your convenience
-                  from your selected locations. Your journey, cost-effective and convenient, commences with us.
+                    Departing at your convenience
+                    from your selected locations. Your journey, cost-effective and convenient, commences with us.
                 </h4>
             </div>
             {isLoader ? <div className='loader-container'>
@@ -80,7 +82,7 @@ const Pricing = () => {
 
 
                                 </div>
-                               
+
                             </div>
                         )}
                     </li>

@@ -15,7 +15,7 @@ import { Modal, Button } from "antd";
 const Payment = () => {
   const location = useLocation();
   const { id, formData, selectedCarPrice } = location.state;
-
+console.log("rwe",selectedCarPrice);
 
 const [isModalOpen, setIsModalOpen] = useState(false);
 const [submissionStatus, setSubmissionStatus] = useState(null);
