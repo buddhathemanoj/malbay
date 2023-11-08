@@ -392,3 +392,8 @@
         margin-top: 15px;
     }
 }
+@media screen and (max-width: 365px) {
+    .bgpic {
+    height: 26vh;
+    }
+    }
