@@ -4,6 +4,8 @@ import { BiTransferAlt } from "react-icons/bi";
 import qrCode from "../../asset/WhatsApp_Image_2023-10-25_at_10.58.26_AM-removebg-preview.png"
 import "./payment.css"
 import paynow from '../../asset/paynow2.jpg'
+import {  useNavigate } from "react-router-dom";
+
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FaUser, FaChild } from 'react-icons/fa';
@@ -13,30 +15,18 @@ import { Modal, Button } from "antd";
 const Payment = () => {
   const location = useLocation();
   const { id, formData, selectedCarPrice } = location.state;
-    console.log(id,formData,selectedCarPrice)
-    console.log(formData.tripType);
-// console.log(formData.pickLocation)
-// console.log(formData.dropLocation)
-// console.log(formData.selectedCarPrice)
-// console.log(formData.adults)
-// console.log(formData.children)
-// console.log(formData.carName)
-// console.log(formData.tripType);
 
-// const GST =()=>{
-//  gstPrice = numericPrice/0.18%
-  
-// }
+
 const [isModalOpen, setIsModalOpen] = useState(false);
 const [submissionStatus, setSubmissionStatus] = useState(null);
+const navigate = useNavigate();
 
 const match = selectedCarPrice && selectedCarPrice.match(/\d+/);
 const numericPrice = match ? parseInt(match[0], 10) : 0;
 
-// State variables for GST and total price
 const [gst, setGst] = useState(0);
 const [totalPrice, setTotalPrice] = useState(0);
-console.log(numericPrice);
+
 useEffect(() => {
   if (numericPrice) {
     const gstAmount = numericPrice * 0.18;  // Assuming GST rate is 18%
@@ -52,29 +42,44 @@ const clickToCancel = () => {
 }
 
 const handleModalClose = () => {
-  setIsModalOpen(false)
-}
+  setIsModalOpen(false);
+  if (submissionStatus) {
+    navigate("/services");
+  }
+};
+
 
 const clickToConfirm = async () => {
-  console.log("the function run");
-  console.log("form",formData);
   try {
-    const response = await axios.post('https://sg2mycabserver.onrender.com/api/contactform/booking/form', formData);
-    console.log('Email sent:', response.data);
-    setIsModalOpen(true);
-    // setSubmissionStatus(response)
+    const response = await fetch('https://sg2mycabserver.onrender.com/api/contactform/booking/form', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      // Set the modal state to true to show it
+      setIsModalOpen(true);
+      setSubmissionStatus(result.success);
+      // Do not navigate here, let the user close the modal first
+    } else {
+      // Handle the case where result.success is not true
+      console.error('Email sent, but success status is false:', result);
+    }
   } catch (error) {
     console.error('Error sending email:', error);
   }
 };
 
-console.log('GST Amount:', gst);
-console.log('Total Price:', totalPrice);
-  console.log(formData.dropLocation)
+
     return (
-      <div>
+      <div className="payment-main-container">
           <div  className="payment-bg-container">
-          {/* <Modal
+          <Modal
                 title="Submission Status"
                 visible={isModalOpen}
                 onCancel={handleModalClose}
@@ -84,8 +89,8 @@ console.log('Total Price:', totalPrice);
                     </Button>
                 ]}
             >
-                {submissionStatus === true ? 'Email has been sent successfully!' : 'Email sending failed. Please try again.'}
-            </Modal> */}
+                {submissionStatus === true ? 'Successfully! Booked , happy riding' : 'Email sending failed. Please try again.'}
+            </Modal>
             <div className="detail-image-container">
                 <div className="payment-card-container">
                     <div style={{display:'flex',justifyContent:'space-between',fontWeight:'bold'}} className="payment-destination"><p>{formData.pickupLocation}</p> <p><BiTransferAlt style={{ marginLeft:"20px", color:"009900",fontSize:"20"}}/></p><p> {formData.dropLocation}</p></div>

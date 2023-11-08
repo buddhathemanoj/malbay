@@ -5,7 +5,6 @@ import '../Home/home.css';
 import "./Booking.css"
 
 export const Booking = (props) => {
-  console.log(props)
   const navigate = useNavigate();
   const [countries, setCountries] = useState([]);
   const [dropLocation, setLocation] = useState({})
@@ -33,7 +32,6 @@ export const Booking = (props) => {
     additionalInfo: ""
   });
 
-  console.log(formData.tripType);
 
 
   useEffect(() => {
@@ -44,12 +42,10 @@ export const Booking = (props) => {
       }));
     }
   }, [dropLocation]);
-  console.log(formData.dropLocation)
 
  
   const clickToPayPage = (event) => {
     event.preventDefault();
-    console.log(formData);
     setBooking(formData);
 
     const selectedCar = car.find(eachCar => eachCar.carName === formData.carName);
@@ -96,7 +92,6 @@ export const Booking = (props) => {
         if (response.status === 200) {
           const locData = response.data
           setLocation(locData)
-          console.log(response.data);
           setCars(response.data.cars)
         }
         else {
@@ -111,7 +106,6 @@ export const Booking = (props) => {
     locationData();
   }, []);
 
-  console.log(formData.pickupTime)
   const clickToBack = () => {
     navigate("/pricing")
   }
@@ -125,7 +119,6 @@ export const Booking = (props) => {
   }
 
   const checkFill = formData.numberOfChildren.length 
-  console.log(checkFill);
 
 
   const { location } = dropLocation

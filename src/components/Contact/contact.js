@@ -19,7 +19,6 @@ const Contact = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log(formData);
         try {
             const response = await fetch('https://sg2mycabserver.onrender.com/api/contactform/send', {
                 method: 'POST',
@@ -28,9 +27,7 @@ const Contact = () => {
                 },
                 body: JSON.stringify(formData)
             });
-            console.log('handleSubmit called');
             const result = await response.json();
-            console.log('Server response:', result);
             setFormData({
                 name: '',
                 email: '',
