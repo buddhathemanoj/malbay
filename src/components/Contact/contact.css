@@ -109,6 +109,11 @@
     padding: 10px 20px;
     cursor: pointer;
   }
+  .contact-total-style {
+    font-size: 23px;
+    font-style: italic;
+    font-weight: bold;
+  }
   @media (max-width:968px) {
     .contact-details {
         flex-direction: column;

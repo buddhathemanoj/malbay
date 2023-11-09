@@ -1,51 +1,62 @@
 .loacation-bg-container {
     min-height: 100vh;
     padding-left: 50px;
-    padding-top: 40px;
+    padding-top: 30px;
     background-color: rgb(255, 255, 255);
 }
+
 .sekinchan-container {
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin-bottom: 50px;
 }
+
 .mersing-container {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 10px;
     margin-bottom: 50px;
 }
+
 .lumbur-container {
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin-bottom: 50px;
 }
+
 .highlands-container {
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin-bottom: 50px;
+    padding: 10px;
 }
+
 .framing-container {
     width: 550px;
     text-align: center;
 }
+
 .framing-heading {
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .framing-desc {
     color: rgb(35, 53, 67);
     font-weight: 400;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 .book-now-btn {
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 4px #ccc;
     color: #000000;
 }
+
 .book-now-btn {
     background-color: #3498db;
     padding: 9px;
@@ -57,8 +68,9 @@
     margin-top: 15px;
     font-weight: bold;
     transition: background-color 0.5s ease;
-    animation: shadow-blink 3s infinite; 
+    animation: shadow-blink 3s infinite;
 }
+
 .book-now-btn:hover {
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 4px #ccc;
@@ -67,58 +79,67 @@
 
 @keyframes shadow-blink {
     0% {
-      box-shadow: 0 0 10px rgb(120, 189, 245);
+        box-shadow: 0 0 10px rgb(120, 189, 245);
     }
+
     50% {
-      box-shadow: 0 0 20px rgb(8, 141, 250);
+        box-shadow: 0 0 20px rgb(8, 141, 250);
     }
+
     100% {
-      box-shadow: 0 0 10px rgb(120, 189, 245);
+        box-shadow: 0 0 10px rgb(120, 189, 245);
     }
-  }
+}
 
 
-  @media (max-width:568px) {
+@media (max-width:568px) {
     .loacation-bg-container {
         padding-left: 0px;
         padding-top: 0px;
     }
+
     .sekinchan-container {
         flex-direction: column;
         background-color: #FFF;
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
+
     .mersing-container {
         flex-direction: column;
         /* background-color: #f2b203; */
-        background-image: linear-gradient(to right,#dfd3ee,#c8afe6,#d3b5f7);
+        background-image: linear-gradient(to bottom, #6dcef7, #a0dffd, #56c9ec);
         padding-top: 30px;
         padding-bottom: 30px;
+        border-radius: 4px;
     }
-    .lumbur-container{
+
+    .lumbur-container {
         flex-direction: column;
         background-color: #FFF;
         padding-top: 30px;
         padding-bottom: 30px;
     }
+
     .highlands-container {
         flex-direction: column;
-        /* background-color: #f2b203; */
-        background-image: linear-gradient(to right,#dfd3ee,#c8afe6,#d3b5f7);
+        border-radius: 4px;
+        background-image: linear-gradient(to bottom, #6dcef7, #a0dffd, #56c9ec);
         padding-top: 30px;
         padding-bottom: 30px;
         margin-bottom: 0px;
     }
+
     .framing-container {
         width: 90%;
         text-align: start;
     }
+
     .location-img {
         width: 370px;
         border-radius: 10px;
         order: -1;
         margin-bottom: 20px;
     }
-   
-  }
+
+}

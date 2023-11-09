@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="bg-dark text-light">
+        <footer className=" text-light" style={{backgroundColor:"#333333"}}>
             <div className="container py-4">
                 <div className="row">
                     <div className="col-12 col-md-4 mb-3 para footer-first-container" >
@@ -32,9 +32,9 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="footerCopy bg-dark text-light py-2">
+            <div className="footerCopy bg-dark text-light py-2" style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
                 <div className="text-center">
-                    <p>Copyrights&copy; 2023. Developed by Digisailor</p>
+                    <p style={{margin:"10px"}}>Copyrights&copy; 2023. Developed by Digisailor</p>
                 </div>
             </div>
         </footer>

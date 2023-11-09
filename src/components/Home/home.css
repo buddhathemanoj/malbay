@@ -87,12 +87,16 @@
 
 .mention-city-style {
     color: #CE5A67;
-    font-weight: bold;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-style: italic; */
 }
 
 .mention-city-style2 {
-    color: #A7D397;
-    font-weight: bold;
+    color: #319c0b;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-style: italic; */
 }
 
 .parahome {
@@ -222,6 +226,7 @@
 .content-wrapper {
     text-align: center;
     padding: 10px;
+    margin-bottom: 20px;
 }
 
 .h1-wrapper {
@@ -270,6 +275,25 @@
 }
 .accord-wrapper {
     padding: 10px !important;
+}
+
+.total-style {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 36px;
+}
+.sg-style {
+    color: #e41538;
+}
+.sg2-style {
+    color: #000;
+}
+.my-style {
+    color:#00b046 ;
+}
+.cab-style {
+    color: #000;
 }
 @media screen and (max-width: 960px) {
     .bgpic {
@@ -334,6 +358,7 @@
     .fleet-images {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         align-items: center;
     }
 

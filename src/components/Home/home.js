@@ -81,7 +81,7 @@ Hyundai Starex : SGD 130
       <div className="bgpic" style={{ backgroundImage: `url(${newCity})` }}>
       </div>
       <div className="homecontparas">
-        <h2 className="Headinghome">Sg2Mycab's Transport Solutions</h2>
+        <h2 className="Headinghome"><span className="total-style"> <span className="sg-style">Sg</span><span className="sg2-style">2</span><span className="my-style">My</span><span className="cab-style">cab</span>'s</span> Transport Solutions</h2>
         <p className="padding20px fontpara parahome">Choose us for unmatched service and customer support in the local tour industry.
          We're committed to providing the best experience, ensuring your satisfaction every step of the way.When it comes to local tours, we stand out by providing the finest service and dedicated customer support. Your satisfaction is our top  priority.Experience local tours like never before. Our commitment to
          excellence and exceptional customer service make us the clear choice for your travel needs.</p>
@@ -231,7 +231,7 @@ Hyundai Starex : SGD 130
           <div className="line"></div>
         </div>
         <p>At Sg2Mycab's Express, we're committed to providing the best service in the local tour industry, emphasizing safety, maintenance, and aesthetic excellence. Our fleet exclusively showcases the latest luxury sedan, SUV, minibus, and coach models, assuring unmatched quality to exceed your expectations.</p>
-        <Slider {...settings} autoplay autoplaySpeed={3000} speed={900}>
+        <Slider {...settings} autoplay autoplaySpeed={3000} speed={900} >
           <div>
             <img className="carosal" src={car1} alt="Blue Alphard" />
           </div>

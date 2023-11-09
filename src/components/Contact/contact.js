@@ -87,7 +87,7 @@ const Contact = () => {
                 </div>
             </div>
             <div className="contactparas">
-                <h1>Get in Touch with Sg2Mycab's Professional Car Service</h1>
+                <h1>Get in Touch with <span className="contact-total-style"> <span className="sg-style">Sg</span><span className="sg2-style">2</span><span className="my-style">My</span><span className="cab-style">cab</span>'s</span> Professional Car Service</h1>
                 <h3>
                     Sg2Mycab is steadfast in its commitment to delivering world-class global chauffeured ground transportation services that outshine other local tours. Our chauffeur service is a testament to our unwavering pursuit of excellence, ensuring punctuality, support, and a level of service that sets the highest industry standards.
                 </h3>
