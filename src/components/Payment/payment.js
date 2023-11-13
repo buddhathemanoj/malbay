@@ -54,12 +54,17 @@ const clickToConfirm = async () => {
     const response = await fetch('https://sg2mycabserver.onrender.com/api/contactform/booking/form', {
       method: 'POST',
       headers: {
-          'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(formData)
+      body: JSON.stringify({
+        formData: formData,
+        selectedCarPrice: selectedCarPrice,
+      }),
     });
 
     const result = await response.json();
+
+    console.log(formData, selectedCarPrice);
 
     if (result.success) {
       setIsModalOpen(true);
@@ -71,7 +76,6 @@ const clickToConfirm = async () => {
     console.error('Error sending email:', error);
   }
 };
-
 
     return (
       <div className="payment-main-container">
