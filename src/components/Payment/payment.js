@@ -24,15 +24,15 @@ const navigate = useNavigate();
 const match = selectedCarPrice && selectedCarPrice.match(/\d+/);
 const numericPrice = match ? parseInt(match[0], 10) : 0;
 
-const [gst, setGst] = useState(0);
+// const [gst, setGst] = useState(0);
 const [totalPrice, setTotalPrice] = useState(0);
 
 useEffect(() => {
   if (numericPrice) {
-    const gstAmount = numericPrice * 0.18;  // Assuming GST rate is 18%
+    const gstAmount = 0  // Assuming GST rate is 18%
     const totalPriceAmount = numericPrice + gstAmount;
 
-    setGst(gstAmount);
+    // setGst(gstAmount);
     setTotalPrice(totalPriceAmount);
   }
 }, [numericPrice]);
@@ -62,12 +62,9 @@ const clickToConfirm = async () => {
     const result = await response.json();
 
     if (result.success) {
-      // Set the modal state to true to show it
       setIsModalOpen(true);
       setSubmissionStatus(result.success);
-      // Do not navigate here, let the user close the modal first
     } else {
-      // Handle the case where result.success is not true
       console.error('Email sent, but success status is false:', result);
     }
   } catch (error) {
@@ -97,9 +94,9 @@ const clickToConfirm = async () => {
                     <h6 className="payment-location">Car Name  <span className="payment-destination">{formData.car}</span></h6>
                     <h6 className="payment-location"> Adults   <span className="payment-destination">{formData.numberOfAdults}</span></h6>
                     <h6 className="payment-location"> Children   <span className="payment-destination">{formData.numberOfChildren}</span></h6>
-                    <hr/>
-                    <h6 className="payment-location">Price  <span className="payment-destination"><b>S${numericPrice}</b></span></h6>
-                    <h6 className="payment-location">GST  <span className="payment-destination"><b>S${gst}</b></span></h6>
+                  
+                    {/* <h6 className="payment-location">Price  <span className="payment-destination"><b>S${numericPrice}</b></span></h6> */}
+                    {/* <h6 className="payment-location">GST  <span className="payment-destination"><b>S${gst}</b></span></h6> */}
                     <hr/>
                     <h6 className="payment-location">Amount  <span className="payment-destination"><b>S${totalPrice}</b></span></h6>
                      <button className="confirm-booking-btn" type="button" onClick={clickToConfirm}>Confirm Booking</button>
